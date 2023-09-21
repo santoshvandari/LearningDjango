@@ -21,6 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-admin.site.site_header = "UMSRA Admin"
-admin.site.site_title = "UMSRA Admin Portal"
-admin.site.index_title = "Welcome to UMSRA Researcher Portal"
+admin.site.site_header = "Santosh Login"
+admin.site.site_title = "Santosh Website"
+admin.site.index_title = "Welcome to Santosh Billing System"
