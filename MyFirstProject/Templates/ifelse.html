@@ -8,15 +8,19 @@
 <body>
     <h1>Numbers</h1>
     <ul>
-        {% for n in numbers %}
-            {% if n > 200 %}
-                <li>Greater than 200: {{n}}</li>
-            {% elif n > 100 %}
-                <li>Greater than 100: {{n}}</li>
-            {% else %}
-                <li>Else Block: {{n}} </li>
-            {% endif %}
-        {% endfor%}
+        {% if numbers|length > 0 %}
+            {% for n in numbers %}
+                {% if n > 200 %}
+                    <li>Greater than 200: {{n}}</li>
+                {% elif n > 100 %}
+                    <li>Greater than 100: {{n}}</li>
+                {% else %}
+                    <li>Else Block: {{n}} </li>
+                {% endif %}
+            {% endfor%}
+        {% else %}
+            No Data Exist 
+        {%%}
     </ul>
 </body>
 </html>
