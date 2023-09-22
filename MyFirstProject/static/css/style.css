@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 header,footer{
-
+    height: 100px;
+    background: #020303;
+    color: #fff;
 }
 .main{
     height: 100vh;
