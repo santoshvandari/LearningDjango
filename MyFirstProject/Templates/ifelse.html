@@ -10,14 +10,17 @@
     <h2>Odd Numbers</h2>
     <ul>
         {% for n in data %}
-        {% if n%2==1 %}
+        {% if (n%2==1) %}
         <li>{{n}}</li>
+        {% endif%}
+        {% endfor%}
     </ul>
 
     <h2>Even Numbers</h2>
     <ul>
-        {% else %}
-            <li>{{n}}</li>
+        {% for n in data %}
+        {% if (n%2==0) %}
+        <li>{{n}}</li>
         {% endif%}
         {% endfor%}
     </ul>
