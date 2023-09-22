@@ -14,7 +14,7 @@ def dynamic(request,url):
             {"name":"Manoj Oli","Address":"Surunga"}
         ]
     }
-    return render(request,"other.html",datas)
+    return render(request,"dynamic.html",datas)
 
 # def DynamicUrl(request):
 #     return HttpResponse("<h1> Dynamic URL Page</h1>")
