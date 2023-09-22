@@ -1,6 +1,10 @@
-{% include "header.html" %}
+{% comment %} {% include "header.html" %} {% endcomment %}
+{% extends "base.html" %}
 
+{% block content %}
 <div class="main">
     <img src="/static/img/img.jpeg"/>
 </div>
-{% include "footer.html" %}
+{% endblock %}
+
+{% comment %} {% include "footer.html" %} {% endcomment %}
