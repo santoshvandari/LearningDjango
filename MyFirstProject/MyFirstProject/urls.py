@@ -21,8 +21,8 @@ from MyFirstProject import views
 urlpatterns = [
     # path('admin/', admin.site.urls),
     path('',views.home,name='home'),
-    path('home',views.home,name='home'),
-    path('<url>',views.dynamic)
+    path('home/',views.home,name='home'),
+    path('<url>/',views.dynamic)
     # path('dynamic/',views.DynamicUrl,name='DynamicUrl'),
     # path('dynamic/<data>/',views.DynamicContent,name="DynamicContent")
 ]
