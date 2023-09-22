@@ -10,12 +10,16 @@
     <h2>Odd Numbers</h2>
     <ul>
         {% for n in data %}
+        {% if (n%2) %}
+        <li>{{n}}</li>
     </ul>
 
     <h2>Even Numbers</h2>
     <ul>
-
-
+        {% else %}
+            <li>{{n}}</li>
+        {% endif%}
+        {% endfor%}
     </ul>
 </body>
 </html>
