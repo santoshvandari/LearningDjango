@@ -14,11 +14,8 @@
             <h4>Address : {{item.Address}}</h4>
             <h4>Programming Language</h4>
             <ul>
-                {%  i=0
-                    while(i<4)
-                    i=i+1
-                %}
-                    <li>{{language[i]}}</li>
+                {% for  lang in language%}
+                    <li>{{lang}}</li>
                 {%endwhile%}
             </ul>
         {%endfor%}
