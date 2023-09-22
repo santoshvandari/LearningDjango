@@ -21,3 +21,8 @@ def loop(request):
 # def DynamicContent(request,data):
 #     Data=data
 #     return HttpResponse(f"The Url is: <b>http://127.0.0.1:8000/Dynamic/{Data}</b>")
+
+
+
+def ifelse(request):
+    return render(request,"ifelse.html")
