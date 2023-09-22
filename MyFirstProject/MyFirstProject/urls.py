@@ -22,10 +22,10 @@ urlpatterns = [
     path('',views.home,name='home'),
     path('home/',views.home,name='home'),
     path('loop/',views.loop),
-    path('ifelse/',views.ifelse)
-    path('contact/',views.contact)
-    path('services/',views.services)
-    path('about/',views.about)
+    path('ifelse/',views.ifelse),
+    path('contact/',views.contact),
+    path('services/',views.services),
+    path('about/',views.about),
 
 
 
