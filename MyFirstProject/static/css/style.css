@@ -7,6 +7,7 @@ header,footer{
     height: 100px;
     background: #020303;
     color: #fff;
+    text-align: center;
 }
 .main{
     height: 100vh;
