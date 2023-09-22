@@ -11,10 +11,10 @@
 <body>
     <header>
         <ul>
-            <a href="{% url "home" %}">Home</a>
-            <a href="/about">About</a>
-            <a href="/services">Services</a>
-            <a href="{% url 'contact' %}">Contact</a>
+            <a class='{% if request.path == "/" or request.path == "/home/"%}active {%endif%}' href="{% url "home" %}">Home</a>
+            <a class='{% if request.path == "/about/"%}active {%endif%}' href="/about">About</a>
+            <a class='{% if request.path == "/services/"%}active {%endif%}' href="/services">Services</a>
+            <a class='{% if request.path == "/contact/"%}active {%endif%}' href="{% url 'contact' %}">Contact</a>
 
         </ul>
     </header>
