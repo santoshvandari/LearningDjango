@@ -9,10 +9,10 @@ def dynamic(request,url):
     datas={
         'value': url,
         'language':["Java","C++","Python","JavaScript"],
-        "info":{
+        "info":[
             {"name":"Santosh Bhandari","Address":"Birtamode"},
             {"name":"Manoj Oli","Address":"Surunga"}
-        }
+        ]
     }
     return render(request,"other.html",datas)
 
