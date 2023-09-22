@@ -19,10 +19,21 @@ from django.urls import path
 from MyFirstProject import views
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
     path('',views.home,name='home'),
-    path('home/',views.home,name='home'),
-    path('/<int:url>/',views.dynamic,name="Slug")
+    path('home/',views.home,name='home')
+
+
+
+
+
+
+
+
+
+
+
+
+    # path('admin/', admin.site.urls),
     # path('dynamic/',views.DynamicUrl,name='DynamicUrl'),
     # path('dynamic/<data>/',views.DynamicContent,name="DynamicContent")
 ]
