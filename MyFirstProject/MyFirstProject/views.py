@@ -7,7 +7,12 @@ def home(request):
 def dynamic(request,url):
     # return HttpResponse(url)
     datas={
-        'value':url
+        'value': url,
+        'language':["Java","C++","Python","JavaScript"],
+        "info":{
+            {"name":"Santosh Bhandari","Address":"Birtamode"},
+            {"name":"Manoj Oli","Address":"Surunga"}
+        }
     }
     return render(request,"other.html",datas)
 
