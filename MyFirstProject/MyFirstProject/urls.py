@@ -22,8 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
     path('home',views.home,name='home'),
-    path('dynamic/',views.DynamicUrl,name='Dynamic URL'),
-    path("dynamic/<int:data>/",view)
+    path('dynamic/',views.DynamicUrl,name='DynamicUrl'),
+    path("dynamic/<int:data>/",views.DynamicContent,name="DynamicContent")
 ]
 
 admin.site.site_header = "Santosh Login"
