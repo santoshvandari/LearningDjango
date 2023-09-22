@@ -20,6 +20,10 @@ header ul a{
     font-weight: bold;
     font-family: cursive;
 }
+header .active{
+    text-decoration: underline;
+}
+
 .main{
     height: 100vh;
     background-color: #2f4f4f;
