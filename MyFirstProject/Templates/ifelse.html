@@ -6,23 +6,19 @@
     <title>If Else in Django</title>
 </head>
 <body>
-    <h1>Data</h1>
-    <h2>Odd Numbers</h2>
+    <h1>Numbers</h1>
     <ul>
-        {% comment %} {% for n in data %}
-            {% if n%2==1 %}
-            <li>{{n}}</li>
-            {% endif%}
-        {% endfor%} {% endcomment %}
+        {% for n in numbers %}
+            {% if n > 200 %}
+                <li>Greater than 200: {{n}}</li>
+            {% elif n > 100 %}
+                <li>Greater than 100: {{n}}</li>
+            {% else %}
+                <li>Else Block: {{n}} </li>
+            {% endif %}
+        {% endfor%}
     </ul>
 
-    <h2>Even Numbers</h2>
-    <ul>
-        {% comment %} {% for n in data %}
-        {% if (n%2==0) %}
-        <li>{{n}}</li>
-        {% endif%}
-        {% endfor%} {% endcomment %}
-    </ul>
+    
 </body>
 </html>
