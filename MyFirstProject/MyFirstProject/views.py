@@ -8,4 +8,4 @@ def DynamicUrl(request):
 
 def DynamicContent(request,data):
     Data=data
-    return HttpResponse(f"The Url is: http://127.0.0.1:8000/Dynamic/{Data}")
+    return HttpResponse(f"The Url is: <b>http://127.0.0.1:8000/Dynamic/{Data}</b>")
