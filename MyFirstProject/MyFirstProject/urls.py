@@ -19,7 +19,7 @@ from django.urls import path
 from MyFirstProject import views
 
 urlpatterns = [
-    path('',views.home,name='home'),
+    path('',views.home,name='root'),
     path('home/',views.home,name='home'),
     path('loop/',views.loop),
     path('ifelse/',views.ifelse),
