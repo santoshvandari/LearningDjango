@@ -1,7 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse("<h1> Welcome the Home Page</h1>")
+    return render(request,"index.html")
 
 def DynamicUrl(request):
     return HttpResponse("<h1> Dynamic URL Page</h1>")
