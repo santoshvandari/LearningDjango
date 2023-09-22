@@ -7,4 +7,10 @@
     height: 100vh;
     background-color: #2f4f4f;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 500px;
 }
