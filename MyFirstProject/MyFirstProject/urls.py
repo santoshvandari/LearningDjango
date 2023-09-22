@@ -22,7 +22,7 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('',views.home,name='home'),
     path('home/',views.home,name='home'),
-    path('<url>/',views.dynamic)
+    path('/<int:url>/',views.dynamic,name="Slug")
     # path('dynamic/',views.DynamicUrl,name='DynamicUrl'),
     # path('dynamic/<data>/',views.DynamicContent,name="DynamicContent")
 ]

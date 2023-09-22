@@ -5,10 +5,11 @@ def home(request):
     return render(request,"index.html")
 
 def dynamic(request,data):
-    datas={
-        'value':data
-    }
-    return render(request,"other.html",datas)
+    return HttpResponse(data)
+    # datas={
+    #     'value':data
+    # }
+    # return render(request,"other.html",datas)
 
 # def DynamicUrl(request):
 #     return HttpResponse("<h1> Dynamic URL Page</h1>")
