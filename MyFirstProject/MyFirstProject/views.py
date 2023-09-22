@@ -4,8 +4,8 @@ from django.shortcuts import render
 def home(request):
     return render(request,"index.html")
 
-def DynamicUrl(request):
-    return HttpResponse("<h1> Dynamic URL Page</h1>")
+# def DynamicUrl(request):
+#     return HttpResponse("<h1> Dynamic URL Page</h1>")
 
 # def DynamicContent(request,data):
 #     Data=data
