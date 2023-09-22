@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("<h1> Welcome the Home Page</h1> <a href='/about/'>About Me</a>")
+    return HttpResponse("<h1> Welcome the Home Page</h1> <a href='/about'>About Me</a>")
 
 def about(request):
     return HttpResponse('''<!doctype html>
