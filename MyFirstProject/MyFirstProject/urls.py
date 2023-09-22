@@ -21,7 +21,8 @@ from MyFirstProject import views
 urlpatterns = [
     path('',views.home,name='home'),
     path('home/',views.home,name='home'),
-    path('loop/',views.loop)
+    path('loop/',views.loop),
+    path('ifelse/',views.ifelse)
 
 
 
