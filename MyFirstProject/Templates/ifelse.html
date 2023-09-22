@@ -9,20 +9,20 @@
     <h1>Data</h1>
     <h2>Odd Numbers</h2>
     <ul>
-        {% for n in data %}
-        {% if (n%2==1) %}
-        <li>{{n}}</li>
-        {% endif%}
-        {% endfor%}
+        {% comment %} {% for n in data %}
+            {% if n%2==1 %}
+            <li>{{n}}</li>
+            {% endif%}
+        {% endfor%} {% endcomment %}
     </ul>
 
     <h2>Even Numbers</h2>
     <ul>
-        {% for n in data %}
+        {% comment %} {% for n in data %}
         {% if (n%2==0) %}
         <li>{{n}}</li>
         {% endif%}
-        {% endfor%}
+        {% endfor%} {% endcomment %}
     </ul>
 </body>
 </html>

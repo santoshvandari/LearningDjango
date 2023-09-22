@@ -25,5 +25,5 @@ def loop(request):
 
 
 def ifelse(request):
-    data=[6,20,12,36,355,694,52,10,25,63,212,5,1,54,845,201351]
+    data={"numbers":[6,20,12,36,355,694,52,10,25,63,212,5,1,54,845,201351]}
     return render(request,"ifelse.html",data)
