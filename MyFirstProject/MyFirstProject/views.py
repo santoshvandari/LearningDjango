@@ -38,6 +38,7 @@ def services(request):
     return render(request,"services.html")
 
 def form(request):
+    data=None
     try:
         data={
             'name':request.GET['name'],
