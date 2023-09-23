@@ -57,3 +57,7 @@ def form(request):
         pass
     return render(request,'form.html',data)
 
+def submit(request):
+    try:
+        if request.method=='POST':
+
