@@ -60,7 +60,7 @@ def services(request):
 
 def form(request):
     data=UserDataForm()
-    return render(request,"form.html",{'data':data})
+    return render(request,"form.html",{'form':data})
 
 
 

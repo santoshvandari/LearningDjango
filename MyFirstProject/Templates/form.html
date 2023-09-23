@@ -14,7 +14,7 @@
 </form> {% endcomment %}
 <form method="POST" action="/submit/">
     {% csrf_token %}
-    {{data}}
+    {{form}}
     {% comment %} <label for="name">Name: </label>
     <input type="text" name="name" id="name">
     <label for="address">Address: </label>
