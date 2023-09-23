@@ -52,3 +52,14 @@ form{
 form label{
     font-size: 20px;
 }
+form button{
+    margin: 10px 0;
+}
+
+div{
+    padding: 10px;
+}
+div p{
+    margin: 10px 0;
+    font-size: 20px;
+}
