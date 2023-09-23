@@ -1,6 +1,6 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect
-
+from .form import UserDataForm
 def home(request):
     return render(request,"index.html")
 
