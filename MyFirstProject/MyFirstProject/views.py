@@ -1,5 +1,5 @@
 from django.http import HttpResponse,HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 def home(request):
     return render(request,"index.html")
@@ -51,7 +51,8 @@ def form(request):
                 'address':request.POST.get('address'),
                 'msg':request.POST.get('msg')
             }
-            return HttpResponseRedirect("/")
+            # return HttpResponseRedirect("/")
+            return redirect("/")
     except:
         pass
     return render(request,'form.html',data)
