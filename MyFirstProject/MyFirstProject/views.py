@@ -67,4 +67,4 @@ def submit(request):
             }
     except:
         pass
-    return render(request,"submit",)
+    return render(request,"submit.html",data)
