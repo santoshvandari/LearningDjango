@@ -61,7 +61,9 @@ def submit(request):
     try:
         if request.method=='POST':
             data={
-                'name':
+                'name': request.POST.get("name"),
+                'add': request.POST.get("address"),
+                'msg': request.POST.get("msg"),
             }
     except:
         pass
