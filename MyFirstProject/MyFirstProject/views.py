@@ -47,7 +47,7 @@ def form(request):
         # }
         if request.method=='POST':
             data={
-                'name':request.POST.get('name'),
+                'name':request.POST['name'],
                 'address':request.POST.get('address'),
                 'msg':request.POST.get('msg')
             }
