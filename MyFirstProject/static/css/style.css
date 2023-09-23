@@ -38,3 +38,15 @@ img{
     border: 10px solid #fff;
     border-radius: 50%;
 }
+.wrapper{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form label{
+    font-size: 20px;
+}
