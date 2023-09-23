@@ -37,25 +37,33 @@ def contact(request):
 def services(request):
     return render(request,"services.html")
 
+# def form(request):
+#     data=None
+#     try:
+#         # data={
+#         #     'name':request.GET['name'],
+#         #     'address':request.GET.get('address'),
+#         #     'msg':request.GET.get('msg')
+#         # }
+#         if request.method=='POST':
+#             data={
+#                 'name':request.POST['name'],
+#                 'address':request.POST.get('address'),
+#                 'msg':request.POST.get('msg')
+#             }
+#             # return HttpResponseRedirect("/")
+#             return redirect("/")
+#     except:
+#         pass
+#     return render(request,'form.html',data)
+
+
 def form(request):
-    data=None
-    try:
-        # data={
-        #     'name':request.GET['name'],
-        #     'address':request.GET.get('address'),
-        #     'msg':request.GET.get('msg')
-        # }
-        if request.method=='POST':
-            data={
-                'name':request.POST['name'],
-                'address':request.POST.get('address'),
-                'msg':request.POST.get('msg')
-            }
-            # return HttpResponseRedirect("/")
-            return redirect("/")
-    except:
-        pass
-    return render(request,'form.html',data)
+    return render(request,"form/",{'data':UserDataForm()})
+
+
+
+
 
 def submit(request):
     try:
