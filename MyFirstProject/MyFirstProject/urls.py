@@ -27,7 +27,7 @@ urlpatterns = [
     path('services/',views.services),
     path('about/',views.about),
     path('form/',views.form,name='form'),
-    path('submit/',views.form,name='submit'),
+    path('submit/',views.submit,name='submit'),
 
 
 
