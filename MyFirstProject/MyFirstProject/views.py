@@ -46,5 +46,5 @@ def form(request):
         }
     except:
         pass
-    return render(request,'form.html')
+    return render(request,'form.html',data)
 
