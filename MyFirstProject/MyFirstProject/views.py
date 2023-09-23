@@ -45,11 +45,12 @@ def form(request):
         #     'address':request.GET.get('address'),
         #     'msg':request.GET.get('msg')
         # }
-        data={
-             'name':request.POST['name'],
-            'address':request.POST.post('address'),
-            'msg':request.POST['msg']
-        }
+        if request.method=='POST':
+            data={
+                'name':request.POST['name'],
+                'address':request.POST.post('address'),
+                'msg':request.POST['msg']
+            }
     except:
         pass
     return render(request,'form.html',data)
