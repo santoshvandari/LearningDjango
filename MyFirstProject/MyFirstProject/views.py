@@ -47,9 +47,9 @@ def form(request):
         # }
         if request.method=='POST':
             data={
-                'name':request.POST['name'],
+                'name':request.POST.get('name'),
                 'address':request.POST.get('address'),
-                'msg':request.POST.get['msg']
+                'msg':request.POST.get('msg')
             }
     except:
         pass
