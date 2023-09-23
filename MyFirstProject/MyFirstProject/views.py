@@ -38,6 +38,13 @@ def services(request):
     return render(request,"services.html")
 
 def form(request):
-    
+    try:
+        data={
+            'name':request.GET['name'],
+            'address':request.GET.get('address'),
+            'msg':request.GET.get('msg')
+        }
+    except:
+        pass
     return render(request,'form.html')
 
