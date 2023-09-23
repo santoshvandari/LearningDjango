@@ -67,3 +67,4 @@ def submit(request):
             }
     except:
         pass
+    return render(request,"submit/",data)
