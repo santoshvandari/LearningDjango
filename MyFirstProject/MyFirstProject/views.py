@@ -40,8 +40,13 @@ def services(request):
 def form(request):
     data=None
     try:
+        # data={
+        #     'name':request.GET['name'],
+        #     'address':request.GET.get('address'),
+        #     'msg':request.GET.get('msg')
+        # }
         data={
-            'name':request.GET['name'],
+             'name':request.GET['name'],
             'address':request.GET.get('address'),
             'msg':request.GET.get('msg')
         }
