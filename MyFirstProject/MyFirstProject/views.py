@@ -59,8 +59,8 @@ def services(request):
 
 
 def form(request):
-    form=UserDataForm()
-    return render(request,"form/",{'data':form})
+    data=UserDataForm()
+    return render(request,"form.html",{'data':data})
 
 
 
