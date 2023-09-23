@@ -73,6 +73,7 @@ def submit(request):
                 'name': request.POST.get("name"),
                 'add': request.POST.get("address"),
                 'msg': request.POST.get("msg"),
+                'email': request.POST.get("email"),
             }
     except:
         pass
