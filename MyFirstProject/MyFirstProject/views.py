@@ -60,4 +60,8 @@ def form(request):
 def submit(request):
     try:
         if request.method=='POST':
-
+            data={
+                'name':
+            }
+    except:
+        pass
