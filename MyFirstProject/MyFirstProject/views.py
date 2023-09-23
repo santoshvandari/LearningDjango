@@ -37,3 +37,7 @@ def contact(request):
 def services(request):
     return render(request,"services.html")
 
+def form(request):
+    
+    return render(request,'form.html')
+
