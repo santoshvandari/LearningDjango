@@ -15,6 +15,7 @@
             <a class='{% if request.path == "/about/"%}active {%endif%}' href="/about">About</a>
             <a class='{% if request.path == "/services/"%}active {%endif%}' href="/services">Services</a>
             <a class='{% if request.path == "/contact/"%}active {%endif%}' href="{% url 'contact' %}">Contact</a>
+            <a class='{% if request.path == "/form/"%}active {%endif%}' href="{% url 'form' %}">Form</a>
 
         </ul>
     </header>
