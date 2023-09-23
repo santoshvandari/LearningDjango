@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% comment %} {% include "header.html" %} {% endcomment %}
 {% block content %}
+<div class="wrapper">
 <h1>Contact US</h1>
 <form action="GET">
     <label for="name">Name: </label>
@@ -10,6 +11,7 @@
     <label for="msg">Message: </label>
     <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
 </form>
+</div>
 {% endblock %}
 
 
