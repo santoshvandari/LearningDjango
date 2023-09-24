@@ -90,5 +90,8 @@ def formdata(request):
     if request.method=='POST':
         name=request.POST.get('name')
         email=request.POST.get('email')
-        message=request.POST.get('name')
+        message=request.POST.get('msg')
+        inset=FormData(name=name,email=email,message=message)
+        inset.save()
+        msg=""
     return render(request,"formdata.html",{"msg":msg})
