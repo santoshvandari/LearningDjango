@@ -34,7 +34,7 @@ def about(request):
     return render(request,"about.html")
 
 def contact(request):
-    datas=ContactData.object.all()
+    datas=ContactData.objects.all()
     for n in datas:
         print(n.name)
 
