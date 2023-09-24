@@ -35,12 +35,7 @@ def about(request):
 
 def contact(request):
     datas=ContactData.objects.all()
-    for n in datas:
-        print(n.name)
-
-
-
-    return render(request,"contact.html")
+    return render(request,"contact.html",{'data':datas})
 
 def services(request):
     return render(request,"services.html")
