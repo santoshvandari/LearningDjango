@@ -31,7 +31,7 @@ urlpatterns = [
     # path('form/',views.form,name='form'),
     # path('submit/',views.submit,name='submit'),
     path('',include('Project.urls')),
-    path('home/',include('Project.urls'))
+    path('home/',include('Project.urls')),
 
 
 
