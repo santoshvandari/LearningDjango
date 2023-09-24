@@ -16,18 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from MyFirstProject import views
+# from MyFirstProject import views
+from Project import urls
+
 
 urlpatterns = [
-    path('',views.home,name='root'),
-    path('home/',views.home,name='home'),
-    path('loop/',views.loop),
-    path('ifelse/',views.ifelse),
-    path('contact/',views.contact,name="contact"),
-    path('services/',views.services),
-    path('about/',views.about),
-    path('form/',views.form,name='form'),
-    path('submit/',views.submit,name='submit'),
+    # path('',views.home,name='root'),
+    # path('home/',views.home,name='home'),
+    # path('loop/',views.loop),
+    # path('ifelse/',views.ifelse),
+    # path('contact/',views.contact,name="contact"),
+    # path('services/',views.services),
+    # path('about/',views.about),
+    # path('form/',views.form,name='form'),
+    # path('submit/',views.submit,name='submit'),
 
 
 
