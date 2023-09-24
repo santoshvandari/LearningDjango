@@ -90,7 +90,7 @@ def formdata(request):
     if request.method=='POST':
         name=request.POST.get('name')
         email=request.POST.get('email')
-        # message=request.POST.get('msg')
+        message=request.POST.get('msg')
         try: 
             insert=FormData(name=name,email=email,message=message)
             insert.save()
