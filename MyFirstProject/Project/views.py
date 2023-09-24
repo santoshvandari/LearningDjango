@@ -86,7 +86,7 @@ def submit(request):
 
 
 def formdata(request):
-
+    msg="Data"
     if request.method=='POST':
         pass
-    return render(request,"formdata.html")
+    return render(request,"formdata.html",{"msg":"msg"})
