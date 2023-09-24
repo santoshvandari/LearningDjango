@@ -1,9 +1,61 @@
-{% extends "base.html" %}
-{% comment %} {% include "header.html" %} {% endcomment %}
-{% block content %}
-<h1>Contact US Form</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        div.wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            flex-direction: column;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            width: 40%;
+        }
+        form label{
+            font-size: 20px;
+        }
+        form input,textarea{
+            font-size: 20px;
+            padding: 2px 5px;
+            margin: 3px 0px;
+        }
+        form button{
+            width: 80px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        div.message{
+            text-align: center;
+            font-size: 25px;
+            color: #152e2e;
+            background: green;
+            width: 40%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">Hello</div>
+    <div class="wrapper">
+    <form method="POST">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+        <label for="msg">Message: </label>
+        <textarea name="msg" id="msg" cols="30" rows="10" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
 
-{% endblock %}
-
-
-{% comment %} {% include "footer.html" %} {% endcomment %}
+</body>
+</html>
