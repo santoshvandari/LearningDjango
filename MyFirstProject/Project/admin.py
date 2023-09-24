@@ -2,7 +2,7 @@ from django.contrib import admin
 from Project.models import ContactData
 
 class ListModels(admin.ModelAdmin):
-    list_display=['name',"email","message","datetime"]
+    list_display=['id','name',"email","message","datetime"]
 
 admin.site.register(ContactData,ListModels)
 
