@@ -34,6 +34,9 @@ def about(request):
     return render(request,"about.html")
 
 def contact(request):
+    datas=ContactData.object.all()
+
+
 
     return render(request,"contact.html")
 
