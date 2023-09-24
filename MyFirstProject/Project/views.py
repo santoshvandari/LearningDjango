@@ -91,8 +91,8 @@ def formdata(request):
         name=request.POST.get('name')
         email=request.POST.get('email')
         message=request.POST.get('msg')
-        inset=FormData(name=name,email=email,message=message)
-        if inset.save():
+        insert=FormData(name=name,email=email,message=message)
+        if insert.save():
             msg="Message Sent Successfully!!"
         else:
             msg="Failed to Sent Message!! Please Try Again!!"
