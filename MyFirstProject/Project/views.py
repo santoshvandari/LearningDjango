@@ -34,6 +34,8 @@ def about(request):
     return render(request,"about.html")
 
 def contact(request):
+    datas=ContactData.objects.all()
+    datas=ContactData.objects.all().order_by("-id")
     datas=ContactData.objects.all().order_by("-id")
     return render(request,"contact.html",{'data':datas})
 
