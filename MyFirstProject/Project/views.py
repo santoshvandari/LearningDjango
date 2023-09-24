@@ -83,3 +83,7 @@ def submit(request):
     except:
         pass
     return render(request,"submit.html",data)
+
+
+def formdata(request):
+    return render(request,"formdata.html")
