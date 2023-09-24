@@ -35,6 +35,8 @@ def about(request):
 
 def contact(request):
     datas=ContactData.object.all()
+    for n in datas:
+        print(n.name)
 
 
 
