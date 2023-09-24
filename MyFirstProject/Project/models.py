@@ -8,3 +8,4 @@ class ContactData(models.Model):
     datetime = models.DateTimeField(auto_now_add = True)
     class Meta:
         db_table="ContactData"
+        get_latest_by = "datetime"
