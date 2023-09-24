@@ -90,10 +90,11 @@ def formdata(request):
     if request.method=='POST':
         name=request.POST.get('name')
         email=request.POST.get('email')
-        message=request.POST.get('msg')
-        insert=FormData(name=name,email=email,message=message)
-        if insert.save():
+        # message=request.POST.get('msg')
+        try: 
+            insert=FormData(name=name,email=email,message=message)
+            insert.save()
             msg="Message Sent Successfully!!"
-        else:
+        except Exception as e:
             msg="Failed to Sent Message!! Please Try Again!!"
     return render(request,"formdata.html",{"msg":msg})
