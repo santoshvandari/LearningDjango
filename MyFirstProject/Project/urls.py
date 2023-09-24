@@ -29,8 +29,9 @@ urlpatterns = [
     # path('about/',views.about),
     # path('form/',views.form,name='form'),
     # path('submit/',views.submit,name='submit'),
-    path('',views.home),
-    path('home/',views.home)
+    path('',views.home,name='home'),
+    path('home/',views.home,name="contact"),
+    path('contact/',views.home,name="form"),
 
 
 

@@ -32,6 +32,7 @@ urlpatterns = [
     # path('submit/',views.submit,name='submit'),
     path('',include('Project.urls')),
     path('home/',include('Project.urls')),
+    path('contact/',include('Project.urls')),
 
 
 
