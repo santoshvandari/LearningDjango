@@ -36,7 +36,7 @@ def about(request):
 def contact(request):
     datas=ContactData.objects.all()
     datas=ContactData.objects.all().order_by("-id")
-    datas=ContactData.objects.all().order_by("-id")
+    datas=ContactData.objects.all()[0:2]
     return render(request,"contact.html",{'data':datas})
 
 def services(request):
