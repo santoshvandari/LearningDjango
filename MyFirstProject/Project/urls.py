@@ -29,6 +29,7 @@ urlpatterns = [
     path('about/',views.about),
     path('form/',views.form,name='form'),
     path('submit/',views.submit,name='submit'),
+    path('formdata/',views.submit,name='submit'),
 
 
 

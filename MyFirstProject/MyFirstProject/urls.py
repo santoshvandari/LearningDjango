@@ -32,6 +32,7 @@ urlpatterns = [
     path('about/',include('Project.urls')),
     path('form/',include('Project.urls')),
     path('submit/',include('Project.urls')),
+    path('formdata/',include('Project.urls')),
   
 
 
