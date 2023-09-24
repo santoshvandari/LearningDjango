@@ -7,6 +7,7 @@ class ListModels(admin.ModelAdmin):
 admin.site.register(ContactData,ListModels)
 
 class FormDataDisp(admin.ModelAdmin):
-    list_display=['id']
+    list_display=['id','name',"email","message","datetime"]
+
 
 # Register your models here.
