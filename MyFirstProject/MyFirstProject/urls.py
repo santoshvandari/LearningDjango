@@ -21,18 +21,16 @@ from django.urls import path,include
 
 
 urlpatterns = [
-    # path('',views.home,name='root'),
-    # path('home/',views.home,name='home'),
-    # path('loop/',views.loop),
-    # path('ifelse/',views.ifelse),
-    # path('contact/',views.contact,name="contact"),
-    # path('services/',views.services),
-    # path('about/',views.about),
-    # path('form/',views.form,name='form'),
-    # path('submit/',views.submit,name='submit'),
-    path('',include('Project.urls')),
-    path('home/',include('Project.urls')),
-    path('contact/',include('Project.urls')),
+    path('',views.home,name='root'),
+    path('home/',views.home,name='home'),
+    path('loop/',views.loop),
+    path('ifelse/',views.ifelse),
+    path('contact/',views.contact,name="contact"),
+    path('services/',views.services),
+    path('about/',views.about),
+    path('form/',views.form,name='form'),
+    path('submit/',views.submit,name='submit'),
+  
 
 
 
