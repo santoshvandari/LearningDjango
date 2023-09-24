@@ -42,7 +42,3 @@ urlpatterns = [
     # path('dynamic/',views.DynamicUrl,name='DynamicUrl'),
     # path('dynamic/<data>/',views.DynamicContent,name="DynamicContent")
 ]
-
-admin.site.site_header = "Santosh Login"
-admin.site.site_title = "Santosh Website"
-admin.site.index_title = "Welcome to Santosh Billing System"
