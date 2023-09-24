@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 # from MyFirstProject import views
-from Project import urls
+# from Project import urls
 
 
 urlpatterns = [
@@ -30,7 +30,7 @@ urlpatterns = [
     # path('about/',views.about),
     # path('form/',views.form,name='form'),
     # path('submit/',views.submit,name='submit'),
-    path('',include(urls.path))
+    path('',include('Project.urls'))
 
 
 
