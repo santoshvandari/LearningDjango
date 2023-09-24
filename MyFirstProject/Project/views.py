@@ -92,6 +92,8 @@ def formdata(request):
         email=request.POST.get('email')
         message=request.POST.get('msg')
         inset=FormData(name=name,email=email,message=message)
-        inset.save()
-        msg=""
+        if inset.save():
+            msg="Message Sent Successfully!!"
+        else:
+            msg="Failed to Sent Message!! Please Try Again!!"
     return render(request,"formdata.html",{"msg":msg})
