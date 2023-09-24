@@ -20,6 +20,7 @@ from django.urls import path
 from Project import views
 
 urlpatterns = [
+    path("admin/",admin.site.urls),
     # path('',views.home,name='root'),
     # path('home/',views.home,name='home'),
     # path('loop/',views.loop),
