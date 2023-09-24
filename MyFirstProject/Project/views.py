@@ -1,7 +1,7 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect
 from .form import UserDataForm
-from .models import ContactData
+from .models import ContactData,FormData
 def home(request):
     # return HttpResponse("Hello World")
     return render(request,"index.html")
