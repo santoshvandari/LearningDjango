@@ -2,22 +2,29 @@
 
 <h1>Contact Us Page</h1>
 <h2> Received Message</h2>
-<table broder="1">
+<table border="1">
     <thead>
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
             <th>Message</th>
+            <th>Date&Time</th>
         </tr>
     </thead>
     <tbody>
-        {% for item in data %}\
-
-        
-
-
         {% for item in data %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.message}}</td>
+            <td>{{item.datetime}}</td>
+
+
+
+
+        {% endfor %}
 
     </tbody>
 
