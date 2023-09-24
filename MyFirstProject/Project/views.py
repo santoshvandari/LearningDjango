@@ -5,16 +5,16 @@ def home(request):
     # return HttpResponse("Hello World")
     return render(request,"index.html")
 
-def loop(request):
-    # return HttpResponse(url)
-    data={
-        'language':["Java","C++","Python","JavaScript"],
-        "info":[
-            {"name":"Santosh Bhandari","Address":"Birtamode"},
-            {"name":"Manoj Oli","Address":"Surunga"}
-        ]
-    }
-    return render(request,"loop.html",data)
+# def loop(request):
+#     # return HttpResponse(url)
+#     data={
+#         'language':["Java","C++","Python","JavaScript"],
+#         "info":[
+#             {"name":"Santosh Bhandari","Address":"Birtamode"},
+#             {"name":"Manoj Oli","Address":"Surunga"}
+#         ]
+#     }
+#     return render(request,"loop.html",data)
 
 # def DynamicUrl(request):
 #     return HttpResponse("<h1> Dynamic URL Page</h1>")
@@ -25,9 +25,9 @@ def loop(request):
 
 
 
-def ifelse(request):
-    data={"numbers":[6,20,12,36,355,694,52,10,25,63,212,5,1,54,845,201351]}
-    return render(request,"ifelse.html",data)
+# def ifelse(request):
+#     data={"numbers":[6,20,12,36,355,694,52,10,25,63,212,5,1,54,845,201351]}
+#     return render(request,"ifelse.html",data)
 
 def about(request):
     return render(request,"about.html")
@@ -38,25 +38,25 @@ def contact(request):
 def services(request):
     return render(request,"services.html")
 
-def form(request):
-    data=None
-    try:
-        # data={
-        #     'name':request.GET['name'],
-        #     'address':request.GET.get('address'),
-        #     'msg':request.GET.get('msg')
-        # }
-        if request.method=='POST':
-            data={
-                'name':request.POST['name'],
-                'address':request.POST.get('address'),
-                'msg':request.POST.get('msg')
-            }
-            # return HttpResponseRedirect("/")
-            return redirect("/")
-    except:
-        pass
-    return render(request,'form.html',data)
+# def form(request):
+#     data=None
+#     try:
+#         # data={
+#         #     'name':request.GET['name'],
+#         #     'address':request.GET.get('address'),
+#         #     'msg':request.GET.get('msg')
+#         # }
+#         if request.method=='POST':
+#             data={
+#                 'name':request.POST['name'],
+#                 'address':request.POST.get('address'),
+#                 'msg':request.POST.get('msg')
+#             }
+#             # return HttpResponseRedirect("/")
+#             return redirect("/")
+#     except:
+#         pass
+#     return render(request,'form.html',data)
 
 
 def form(request):
