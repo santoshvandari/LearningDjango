@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +43,7 @@
             margin: auto;
         }
     </style>
-    <scirpt defer src="{% static "/js/script.js" %}"></script>
+    <scirpt defer src="{% static "js/script.js" %}"></script>
 </head>
 <body>
     <div class="message">{{msg}}</div>
