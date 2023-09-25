@@ -134,4 +134,5 @@ def login(request):
 
 
 def dashboard(request):
-    return render(request,"dashboard.html")
+    user="Default"
+    return render(request,"dashboard.html",{'user':user})
