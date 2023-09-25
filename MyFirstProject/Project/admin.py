@@ -21,4 +21,4 @@ admin.site.register(ImageUpload,ImageUploadDisp)
 
 class FileUploadDisplay(admin.ModelAdmin):
         list_display=['id','name','file']
-admin.site.register(FileUpload,ImageUploadDisp)
+admin.site.register(FileUpload,FileUploadDisplay)
