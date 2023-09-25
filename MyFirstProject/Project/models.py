@@ -23,7 +23,7 @@ class FormData(models.Model):
 
 class ImageUpload(models.Model):
     name=models.CharField(max_length=30)
-    image=models.FileField(upload_to="images")
+    image=models.FileField(upload_to="images", max_length=20,default=None)
     class Meta:
         db_table="ImageUpload"
         get_latest_by = "datetime"
