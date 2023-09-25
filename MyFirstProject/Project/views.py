@@ -101,3 +101,6 @@ def formdata(request):
 
 def file(request):
     msg=""
+    if request.method=='POST':
+        pass
+    return render(request,"file.html",{'msg':msg})
