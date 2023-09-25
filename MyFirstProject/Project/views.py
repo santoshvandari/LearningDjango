@@ -124,3 +124,9 @@ def file(request):
         #     handle_uploaded_file(request.FILES["file"])
         #     return HttpResponseRedirect("/success/url/")
     return render(request,"file.html",{'msg':msg})
+
+
+
+
+def login(request):
+    return render(request, "login.html")
