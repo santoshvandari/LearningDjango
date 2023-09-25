@@ -98,3 +98,6 @@ def formdata(request):
         except Exception as e:
             msg="Failed to Sent Message!! Please Try Again!!"
     return render(request,"formdata.html",{"msg":msg})
+
+def file(request):
+    msg=""
