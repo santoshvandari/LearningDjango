@@ -18,3 +18,12 @@ class FormData(models.Model):
     datetime = models.DateTimeField(auto_now_add = True)
     class Meta:
         db_table="FormData"
+
+
+
+class ImageUpload(models.Model):
+    name=models.CharField(max_length=30)
+    image=models.FileField(upload_to="images")
+    class Meta:
+        db_table="ImageUpload"
+        get_latest_by = "datetime"
