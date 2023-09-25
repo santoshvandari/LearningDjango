@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 # from MyFirstProject import views
 from Project import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('',views.home,name='root'),
@@ -43,3 +45,8 @@ urlpatterns = [
     # path('dynamic/',views.DynamicUrl,name='DynamicUrl'),
     # path('dynamic/<data>/',views.DynamicContent,name="DynamicContent")
 ]
+
+
+
+if settings.DEBUG:
+    urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
