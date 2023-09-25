@@ -100,7 +100,7 @@ def formdata(request):
     return render(request,"formdata.html",{"msg":msg})
 
 def file(request):
-    msg=""
+    msg="santosh bhandari"
     if request.method=='POST':
         pass
     return render(request,"file.html",{'msg':msg})
