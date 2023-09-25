@@ -27,3 +27,11 @@ class ImageUpload(models.Model):
     class Meta:
         db_table="ImageUpload"
         get_latest_by = "datetime"
+
+
+class FileUpload(models.Model):
+    name=models.CharField(max_length=30)
+    file=models.FileField(upload_to="images", max_length=50,default=None, null=True)
+    class Meta:
+        db_table="ImageUpload"
+        get_latest_by = "datetime"
