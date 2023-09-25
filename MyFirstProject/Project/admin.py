@@ -14,7 +14,7 @@ admin.site.register(FormData,FormDataDisp)
 
 
 class ImageUploadDisp(admin.ModelAdmin):
-    disp=['id','name','image']
+    list_display=['id','name','image']
 admin.site.register(ImageUpload,ImageUploadDisp)
 
 # Register your models here.
