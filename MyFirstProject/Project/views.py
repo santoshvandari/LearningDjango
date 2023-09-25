@@ -104,9 +104,12 @@ def file(request):
     if request.method=='POST':
         name=request.POST.get('name')
         file=request.FILES['file']
-        filename=request.FILES['file']['name']
-        if (filename.uploadfile.name).endswith(".png"):
-            print(file)
+        # filename=request.FILES['file']['name']
+        filename=str(file)
+        if filename.endswith(".png"):
+            print("Yes it is")
+        else:
+            print("not it's noe")
         try:
             upload=FileUpload(name=name,file=file)
             # if upload.is_valid():
