@@ -34,6 +34,7 @@ urlpatterns = [
     path('formdata/',views.formdata,name='formdata'),
     path('file/',views.file,name='file'),
     path('login/',views.login,name="login"),
+    path('dashboard/',views.dashboard,name="dashboard"),
 
 
 
