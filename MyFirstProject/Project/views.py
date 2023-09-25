@@ -105,8 +105,10 @@ def file(request):
         name=request.POST.get('name')
         file=request.POST.get('file')
         try:
-            upload=FileUpload(name=name,file=file)
+            upload=FileUpload(name=name)
             upload.save()
+            handle_uploaded_file(request.FILES["file"])
+
             msg="File Successfully Uploaded!!!"
         except:
             msg="Failed to Upload File!!!"
