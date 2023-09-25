@@ -33,6 +33,7 @@ urlpatterns = [
     path('submit/',views.submit,name='submit'),
     path('formdata/',views.formdata,name='formdata'),
     path('file/',views.file,name='file'),
+    path('login/',views.login,name="login"),
 
 
 
