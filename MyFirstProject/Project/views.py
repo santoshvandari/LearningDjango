@@ -103,7 +103,7 @@ def file(request):
     msg=""
     if request.method=='POST':
         name=request.POST.get('name')
-        file=request.FILE['file']
+        file=request.POST.get('file')
         try:
             upload=FileUpload(name=name,file=file)
             upload.save()
