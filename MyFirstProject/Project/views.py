@@ -102,5 +102,9 @@ def formdata(request):
 def file(request):
     msg=""
     if request.method=='POST':
-        pass
+        name=request.POST.get('name')
+        # form = UploadFileForm(request.POST, request.FILES)
+        # if form.is_valid():
+        #     handle_uploaded_file(request.FILES["file"])
+        #     return HttpResponseRedirect("/success/url/")
     return render(request,"file.html",{'msg':msg})
