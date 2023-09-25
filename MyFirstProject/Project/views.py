@@ -1,7 +1,7 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render,redirect
 from .form import UserDataForm
-from .models import ContactData,FormData
+from .models import ContactData,FormData,FileUpload
 def home(request):
     # return HttpResponse("Hello World")
     return render(request,"index.html")
@@ -103,6 +103,9 @@ def file(request):
     msg=""
     if request.method=='POST':
         name=request.POST.get('name')
+        file=request.FILE['file']
+        # try:
+        upload=FileUpload(name=name,file=file)
         # form = UploadFileForm(request.POST, request.FILES)
         # if form.is_valid():
         #     handle_uploaded_file(request.FILES["file"])
