@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         div.wrapper{
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
-            padding: 20px;
             flex-direction: column;
+            height: 100vh;
         }
         form{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: left;
+            align-items: center;
             width: 40%;
         }
         form label{
@@ -29,29 +34,22 @@
             margin: 3px 0px;
         }
         form button{
-            width: 80px;
-            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px 20px;    
+            border-radius: 10px;
             font-size: 20px;
         }
-        div.message{
-            text-align: center;
-            font-size: 25px;
-            color: #152e2e;
-            background: green;
-            width: 40%;
-            margin: auto;
-        }
+
     </style>
 </head>
 <body>
-    <div class="message"></div>
     <div class="wrapper">
-    <form method="POST" enctype="multipart/form-data">
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name" required>
-        <label for="file">File:</label>
-        <input type="file" name="file" id="file" required/>
-        <button type="submit">Send</button>
+    <form method="POST">
+       <label for="username">Username: </label>
+       <input type="text" name="username" id="username">
+       <label for="password">Password: </label>
+       <input type="password" name="password" id="password">
+        <button type="submit">Login</button>
 
 
 
