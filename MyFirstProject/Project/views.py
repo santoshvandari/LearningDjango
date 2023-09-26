@@ -128,13 +128,13 @@ def file(request):
 
 
 
-def login(request):
+def loginUser(request):
     return render(request, "login.html")
 
 
 
 
-def logout(request):
+def logoutUser(request):
     return redirect("index.html")
 
 
