@@ -13,10 +13,9 @@ def Index(request):
             response=response.json()
             print(response)
             # print(response['temp'])
-            # data=[
-
-            # ]
-            # return render(request,"index.html",response.text)
+            # {'cloud_pct': 75, 'temp': 22, 'feels_like': 23, 'humidity': 88, 'min_temp': 22, 'max_temp': 22, 'wind_speed': 2.06, 'wind_degrees': 200, 'sunrise': 1695686921, 'sunset': 1695730313}
+            # data=response
+            return render(request,"index.html",response)
         else:
             print("Error:", response.status_code, response.text)
     return render(request,"index.html")
