@@ -75,10 +75,12 @@ WSGI_APPLICATION = 'WeatherApp.wsgi.application'
 
 DATABASES = {
      "default": {
-        "NAME": "temp",
-        "ENGINE": "django.db.backends.mysql",
-        "USER": "test",
-        "PASSWORD": "test",
+       'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'temp',
+        'USER': 'test',
+        'PASSWORD': 'test',
+        'HOST': 'localhost',
+        'PORT': '3306',  
     },
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
