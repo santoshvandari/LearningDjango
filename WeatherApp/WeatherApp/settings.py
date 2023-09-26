@@ -77,8 +77,8 @@ DATABASES = {
      "default": {
         "NAME": "temp",
         "ENGINE": "django.db.backends.mysql",
-        "USER": "temp",
-        "PASSWORD": "temp",
+        "USER": "test",
+        "PASSWORD": "test",
     },
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
