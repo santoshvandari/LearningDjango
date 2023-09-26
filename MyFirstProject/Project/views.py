@@ -129,6 +129,7 @@ def file(request):
 
 
 def loginUser(request):
+    request.session['msg']=""
     
     if request.method=='POST':
         user=request.POST.get("username")
