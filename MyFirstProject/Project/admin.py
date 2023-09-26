@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Project.models import ContactData,FormData,ImageUpload,FileUpload
+from Project.models import ContactData,FormData,ImageUpload,FileUpload,UserData
 
 class ListModels(admin.ModelAdmin):
     list_display=['id','name',"email","message","datetime"]
@@ -22,3 +22,7 @@ admin.site.register(ImageUpload,ImageUploadDisp)
 class FileUploadDisplay(admin.ModelAdmin):
         list_display=['id','name','file']
 admin.site.register(FileUpload,FileUploadDisplay)
+
+class userDataDisplay(admin.ModelAdmin):
+        list_display=['username',"password"]
+admin.site.register(UserData,userDataDisplay)
