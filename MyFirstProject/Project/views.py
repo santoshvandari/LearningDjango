@@ -152,7 +152,7 @@ def loginUser(request):
 
 
 def logoutUser(request):
-    del request.session['user']
+    # del request.session['user']
     return redirect("index.html")
 
 
