@@ -134,7 +134,7 @@ def loginUser(request):
         user=request.POST.get("username")
         pwd=request.POST.get("password")
         try: 
-            data=UserData.objects.get(username=user,password=pwd)
+            data=UserData.objects.filter(username=user,password=pwd)
             if data:
                 print("user data exist")
                 return render(request, "login.html",{'msg':"user exist"})
