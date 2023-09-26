@@ -27,6 +27,7 @@
     border: 5px solid #1abc9c;
     background: transparent;
     font-weight: bold;
+    font-size: 20px
   }
   .container .search-city input::-moz-placeholder {
     color: #fff;
