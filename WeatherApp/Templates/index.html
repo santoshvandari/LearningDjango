@@ -17,7 +17,14 @@
             <input type="text" name="city" placeholder="Enter the City"/>
             <button type="submit">Search</button>
         </form>
+
         <h1>Weather Information of <span id="city">City</span></h1>
+        {% if code %}
+        <div id="errorMessage">
+            Sorry! City didn't Found
+            <p>Please Enter Another City</p>
+        </div>
+        {% else %}
         <div class="cards">
             <div class="card card1">
                 <h2>Temperature</h2>
@@ -56,10 +63,8 @@
                 </tr>
             </table>
         </div>
-        <div id="errorMessage">
-            Sorry! City didn't Found
-            <p>Please Enter Another City</p>
-        </div>
+        {% endif %}
+       
     </div>
     </main>
     <footer>
