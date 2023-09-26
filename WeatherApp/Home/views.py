@@ -21,7 +21,7 @@ def Index(request):
                 # print(response + {"city":city})
                 return render(request,"index.html",response)
             else:
-                return render(request,"index.html",{'code':response.status_code})
+                return render(request,"index.html",{'code':response.status_code,'city':city})
     except:
-            return render(request,"index.html",{"error":True})   
+            return render(request,"index.html",{"error":True,'city':city})   
     # return render(request,"index.html")
