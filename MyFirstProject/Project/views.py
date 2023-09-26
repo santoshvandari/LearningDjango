@@ -129,7 +129,8 @@ def file(request):
 
 
 def loginUser(request):
-    request.session['msg']=""
+    if 'msg' not in request.session:
+        request.session['msg']=""
     if request.method=='POST':
         user=request.POST.get("username")
         pwd=request.POST.get("password")
@@ -155,6 +156,7 @@ def loginUser(request):
 
 def logoutUser(request):
     del request.session['user']
+    request.session['msg']=""
     return redirect("/login")
 
 
