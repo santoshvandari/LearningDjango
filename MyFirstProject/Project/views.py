@@ -137,16 +137,17 @@ def loginUser(request):
             data=UserData.objects.filter(username=user,password=pwd)
             if data:
                 request.session['user'] = data[0].username
-                print("user data exist")
-                return redirect("/dashboard",{'user':request.session['user']})
+                return redirect("/dashboard")
                 
             else: 
                 print("user Data Doesn't exit")
-                return redirect("/login",{'msg':"Sorry!! Please Recheck Your Credential"})
+                request.session['msg']="Sorry!! Please Recheck Your Credential"
+                return redirect("/login")
         except:
-            print("user Data Doesn't exit")
-            return redirect("/login",{'msg':"Sorry!! Some Issue Arise!!!"})
-
+            request.session['msg']="Sorry!! Some Issue Arise!!!"
+            return redirect("/login",{'msg':"S"})
+    if 'user' in request.session:
+        return redirect(request,"dashboard.html")
     return render(request, "login.html",{'msg':""})
 
 
@@ -160,11 +161,12 @@ def logoutUser(request):
 
 def dashboard(request):
     userdata=""
-    if request.session["user"]:
+    if 'user' in request.session:
         userdata=request.session["user"]
         return render(request,"dashboard.html",{'userdata':userdata})
     else:
-        return redirect(request, "/login",{'msg':"Please Login First"})
+        return redirect("/login",{'msg':"Sorry!! Some Issue Arise!!!"})
+
 
 
 
