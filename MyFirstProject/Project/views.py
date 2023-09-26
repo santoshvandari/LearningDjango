@@ -132,15 +132,18 @@ def loginUser(request):
     if request.method=='POST':
         user=request.POST.get("username")
         pwd=request.POST.get("password")
-        data=UserData.objects.get(username=user,password=pwd)
-        if data:
-            print("user data exist")
-            return render(request, "login.html",{'msg':"user exist"})
-
-
-        else: 
+        try: 
+            data=UserData.objects.get(username=user,password=pwd)
+            if data:
+                print("user data exist")
+                return render(request, "login.html",{'msg':"user exist"})
+            else: 
+                print("user Data Doesn't exit")
+                return render(request, "login.html",{'msg':"user Doesn't exist"})
+        except:
             print("user Data Doesn't exit")
             return render(request, "login.html",{'msg':"user Doesn't exist"})
+
     return render(request, "login.html")
 
 
