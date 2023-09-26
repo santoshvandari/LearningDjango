@@ -165,7 +165,7 @@ def dashboard(request):
         user=request.session["user"]
         return render(request,"dashboard.html",{'user':user})
     else:
-        return redirect(request, "login.html",{'msg':"Sorry!! Some Issue Arise!!!"})
+        return redirect(request, "login.html",{'msg':"Please Login First"})
 
 
 
