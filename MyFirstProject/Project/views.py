@@ -129,6 +129,9 @@ def file(request):
 
 
 def loginUser(request):
+    if request.method=='POST':
+        user=request.POST.get("username")
+        pwd=request.POST.get("password")
     return render(request, "login.html")
 
 
