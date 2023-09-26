@@ -18,7 +18,7 @@
             <button type="submit">Search</button>
         </form>
 
-        <h1>Weather Information of <span id="city">City</span></h1>
+        <h1>Weather Information of <span id="city">{{request.session['city']}}</span></h1>
         {% if code or error %}
         <div id="errorMessage">
             {% if code %}
