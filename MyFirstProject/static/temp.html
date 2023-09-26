@@ -10,7 +10,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+        div.wrapper{
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,15 +18,12 @@
             flex-direction: column;
             height: 100vh;
         }
-        div.wrapper{
-            width: 40%;
-        }
         form{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 20%;
+            width: 15%;
         }
         form label{
             font-size: 20px;
@@ -45,17 +42,18 @@
         }
         div.message{
             font-size: 20px;
-            background: aquamarine;
-            width: 20%;
+            color: red;
+            width: 15%;
             padding: 10px;
             text-align: center;
+            margin: 20px 0;
         }
 
     </style>
 </head>
 <body>
     <div class="wrapper">
-    <div class="message">Hello</div>
+    <div class="message"></div>
     <form method="POST">
         <label for="username">Username: </label>
        <input type="text" name="username" id="username">
