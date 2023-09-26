@@ -133,6 +133,12 @@ def login(request):
 
 
 
+
+def logout(request):
+    return redirect("index.html")
+
+
+
 def dashboard(request):
     user="Default"
     return render(request,"dashboard.html",{'user':user})
