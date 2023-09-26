@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 import requests
-
+import datetime
 # Create your views here.
 
 def Index(request):
@@ -16,6 +16,8 @@ def Index(request):
             if response.status_code == requests.codes.ok:
                 response=response.json()
                 response['city']=city
+                response['sunrise']= datetime.datetime.fromtimestamp(response['sunrise']).strftime('%H:%M:%S')
+                response['sunset']=datetime.datetime.fromtimestamp(response['sunset']).strftime('%H:%M:%S')
                 # print(response + {"city":city})
                 return render(request,"index.html",response)
             else:
