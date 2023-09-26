@@ -21,15 +21,15 @@
         <div class="cards">
             <div class="card card1">
                 <h2>Temperature</h2>
-                <p><span id="Temperature"></span>&#8451</p>
+                <p><{{temp}}&#8451</p>
             </div>
             <div class="card card1">
                 <h2>Humidity</h2>
-                <p><span id="Humidity"></span>m/s</p>
+                <p>{{humidity}}>m/s</p>
             </div>
             <div class="card card1">
                 <h2>Wind</h2>
-                <p><span id="wind"></span>km/hr</p>
+                <p><{{wind_speed}}km/hr</p>
             </div>
         </div>
         <div class="other">
@@ -45,11 +45,11 @@
                     <th>Sunset</th>
                 </tr>
                 <tr>
-                    <td id="InfoCity"></td>
-                    <td id="cloudPCT"></td>
-                    <td id="windDegree"></td>
-                    <td id="maxTemp"></td>
-                    <td id="minTemp"></td>
+                    <td id="InfoCity">city</td>
+                    <td id="cloudPCT">{{cloud_pct}}</td>
+                    <td id="windDegree">{{wind_degrees}}</td>
+                    <td id="maxTemp">{{max_temp}}</td>
+                    <td id="minTemp">{{min_temp}}</td>
                     <td id="sunrise"></td>
                     <td id="sunset"></td>
                     
