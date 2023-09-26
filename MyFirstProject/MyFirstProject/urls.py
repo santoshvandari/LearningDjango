@@ -56,4 +56,4 @@ urlpatterns = [
 admin.site.site_header = "Santosh Login"
 admin.site.site_title = "Santosh Website"
 admin.site.index_title = "Welcome to Santosh Billing System"
-handler404 = include('Project.urls')
+handler404 = 'Project.views.custom404'

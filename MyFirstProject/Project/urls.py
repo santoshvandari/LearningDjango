@@ -48,7 +48,7 @@ urlpatterns = [
     # path('dynamic/<data>/',views.DynamicContent,name="DynamicContent")
 ]
 
-# handler404 = 'views.custom_404_view_name'
+handler404 = 'views.custom_404_view_name'
 
 
 if settings.DEBUG:
