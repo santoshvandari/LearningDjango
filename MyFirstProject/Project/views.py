@@ -149,7 +149,7 @@ def loginUser(request):
             return redirect("/login")
     if 'user' in request.session:
         return redirect(request,"dashboard.html")
-    return render(request, "login.html")
+    return render(request, "login.html",{'msg':request.session['msg']})
 
 
 
