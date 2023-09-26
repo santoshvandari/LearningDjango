@@ -40,3 +40,5 @@ class FileUpload(models.Model):
 class UserData(models.Model):
     username=models.CharField(max_length=50, primary_key=True)
     password=models.CharField(Null=False)
+    class Meta:
+        db_tale="UserData"
