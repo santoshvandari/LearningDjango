@@ -1,12 +1,13 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <style>
-        div.wrapper{
+        div.wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -14,27 +15,33 @@
             padding: 20px;
             flex-direction: column;
         }
-        form{
+
+        form {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: left;
             width: 40%;
         }
-        form label{
+
+        form label {
             font-size: 20px;
         }
-        form input,textarea{
+
+        form input,
+        textarea {
             font-size: 20px;
             padding: 2px 5px;
             margin: 3px 0px;
         }
-        form button{
+
+        form button {
             width: 80px;
             border-radius: 5px;
             font-size: 20px;
         }
-        div.message{
+
+        div.message {
             text-align: center;
             font-size: 25px;
             color: #152e2e;
@@ -43,22 +50,24 @@
             margin: auto;
         }
     </style>
-    <script defer src="{% static "/js/script.js" %}"></script>
+    <script defer src="{% static " /js/script.js" %}"></script>
 </head>
+
 <body>
     <div class="message">{{msg}}</div>
     <div class="wrapper">
-    <form method="POST">
-        {% csrf_token %}
-        <label for="name">Name: </label>
-        <input type="text" name="name" id="name" required>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email" required>
-        <label for="msg">Message: </label>
-        <textarea name="msg" id="msg" cols="30" rows="10" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-</div>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+            <label for="msg">Message: </label>
+            <textarea name="msg" id="msg" cols="30" rows="10" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
 
 </body>
+
 </html>
