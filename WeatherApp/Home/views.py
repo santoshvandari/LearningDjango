@@ -18,5 +18,4 @@ def Index(request):
                 return render(request,"index.html",{'code':response.status_code})
         except:
             return render(request,"index.html",{"error":True})
-
     return render(request,"index.html")
