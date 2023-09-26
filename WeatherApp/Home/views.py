@@ -5,7 +5,7 @@ import requests
 # Create your views here.
 
 def Index(request):
-    city=None
+    city=""
     if request.method=='POST':
         city = request.POST.get("city").strip()
     if city=="":
