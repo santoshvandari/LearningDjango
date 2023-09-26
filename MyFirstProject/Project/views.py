@@ -138,7 +138,8 @@ def loginUser(request):
             if data:
                 request.session['user'] = data[0].username
                 print("user data exist")
-                return render(request, "login.html",{'msg':"user exist"})
+                return render(request,"dashboard.html",{'user':request.session['user']})
+                
             else: 
                 print("user Data Doesn't exit")
                 return render(request, "login.html",{'msg':"user Doesn't exist"})
