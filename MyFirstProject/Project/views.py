@@ -132,6 +132,7 @@ def loginUser(request):
     if 'msg' not in request.session:
         request.session['msg']=""
     if request.method=='POST':
+        request.session['msg']=""
         user=request.POST.get("username")
         pwd=request.POST.get("password")
         try: 
