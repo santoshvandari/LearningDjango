@@ -136,6 +136,7 @@ def loginUser(request):
         try: 
             data=UserData.objects.filter(username=user,password=pwd)
             if data:
+                request.session['user'] = data[0].username
                 print("user data exist")
                 return render(request, "login.html",{'msg':"user exist"})
             else: 
@@ -151,6 +152,7 @@ def loginUser(request):
 
 
 def logoutUser(request):
+    del request.session['user']
     return redirect("index.html")
 
 
