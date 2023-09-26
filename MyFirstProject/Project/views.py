@@ -129,7 +129,7 @@ def file(request):
 
 
 def loginUser(request):
-    # msg=""
+    
     if request.method=='POST':
         user=request.POST.get("username")
         pwd=request.POST.get("password")
@@ -145,10 +145,10 @@ def loginUser(request):
                 return redirect("/login")
         except:
             request.session['msg']="Sorry!! Some Issue Arise!!!"
-            return redirect("/login",{'msg':"S"})
+            return redirect("/login")
     if 'user' in request.session:
         return redirect(request,"dashboard.html")
-    return render(request, "login.html",{'msg':""})
+    return render(request, "login.html")
 
 
 
@@ -165,7 +165,8 @@ def dashboard(request):
         userdata=request.session["user"]
         return render(request,"dashboard.html",{'userdata':userdata})
     else:
-        return redirect("/login",{'msg':"Sorry!! Some Issue Arise!!!"})
+        request.session['msg']="Sorry!! Please Login First!!!"
+        return redirect("/login")
 
 
 
