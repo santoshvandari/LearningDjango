@@ -159,10 +159,10 @@ def logoutUser(request):
 
 
 def dashboard(request):
-    user=""
+    userdata=""
     if request.session["user"]:
-        user=request.session["user"]
-        return render(request,"dashboard.html",{'user':user})
+        userdata=request.session["user"]
+        return render(request,"dashboard.html",{'userdata':userdata})
     else:
         return redirect(request, "/login",{'msg':"Please Login First"})
 
