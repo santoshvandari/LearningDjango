@@ -116,7 +116,6 @@
     font-size: 100px;
     padding: 100px 0px;
     text-align: center;
-    /* display: block; */
   }
   .container #errorMessage p {
     font-size: 50px;
@@ -133,4 +132,4 @@
     display: block;
     text-decoration: none;
     color: #1abc9c;
-  }/*# sourceMappingURL=style.css.map */
+  }
