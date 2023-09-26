@@ -35,6 +35,7 @@ urlpatterns = [
     path('formdata/',include('Project.urls')),
     path('file/',include('Project.urls')),
     path('login/',include('Project.urls')),
+    path('logout/',include("Project.urls")),
   
 
 
