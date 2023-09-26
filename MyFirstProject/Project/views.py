@@ -138,14 +138,14 @@ def loginUser(request):
             if data:
                 request.session['user'] = data[0].username
                 print("user data exist")
-                return render(request,"dashboard.html",{'user':request.session['user']})
+                return redirect(request,"dashboard.html",{'user':request.session['user']})
                 
             else: 
                 print("user Data Doesn't exit")
-                return render(request, "login.html",{'msg':"user Doesn't exist"})
+                return redirect(request, "login.html",{'msg':"Sorry!! Please Recheck Your Credential"})
         except:
             print("user Data Doesn't exit")
-            return render(request, "login.html",{'msg':"user Doesn't exist"})
+            return redirect(request, "login.html",{'msg':"Sorry!! Some Issue Arise!!!"})
 
     return render(request, "login.html",{'msg':""})
 
