@@ -155,8 +155,9 @@ def loginUser(request):
 
 
 def logoutUser(request):
-    del request.session['user']
-    request.session['msg']=""
+    if 'user' in request.session:
+        del request.session['user']
+        del request.session['msg']
     return redirect("/login")
 
 
