@@ -129,6 +129,7 @@ def file(request):
 
 
 def loginUser(request):
+    # msg=""
     if request.method=='POST':
         user=request.POST.get("username")
         pwd=request.POST.get("password")
@@ -144,7 +145,7 @@ def loginUser(request):
             print("user Data Doesn't exit")
             return render(request, "login.html",{'msg':"user Doesn't exist"})
 
-    return render(request, "login.html")
+    return render(request, "login.html",{'msg':""})
 
 
 
