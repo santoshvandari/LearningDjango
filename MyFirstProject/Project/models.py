@@ -35,3 +35,7 @@ class FileUpload(models.Model):
     class Meta:
         db_table="FileUpload"
         get_latest_by = "datetime"
+
+
+class UserData(models.Model):
+    username=models.CharField(max_length=50)
