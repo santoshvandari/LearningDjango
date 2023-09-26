@@ -35,6 +35,7 @@ urlpatterns = [
     path('file/',views.file,name='file'),
     path('login/',views.login,name="login"),
     path('dashboard/',views.dashboard,name="dashboard"),
+    path('dashboard/',views.dashboard,name="dashboard"),
 
 
 
