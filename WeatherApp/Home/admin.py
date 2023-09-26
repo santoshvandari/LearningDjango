@@ -4,4 +4,5 @@ from .models import Testing
 
 class TestingDisp(admin.ModelAdmin):
     list_display = ["id", "name", "email"]
-    
+
+admin.site.register(Testing,TestingDisp)
