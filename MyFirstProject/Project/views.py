@@ -132,6 +132,8 @@ def loginUser(request):
     if request.method=='POST':
         user=request.POST.get("username")
         pwd=request.POST.get("password")
+        data=UserData.objects.get(username=user,password=pwd)
+        # if 
     return render(request, "login.html")
 
 
