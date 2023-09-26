@@ -6,9 +6,9 @@ import requests
 
 def Index(request):
     if request.method=='POST':
-        city = 'london'
-        api_url = 'https://api.api-ninjas.com/v1/weather?city={}'.format(city)
-        response = requests.get(api_url, headers={'X-Api-Key': 'YOUR_API_KEY'})
+        city = 'Kathmandu'
+        api_url = f'https://api.api-ninjas.com/v1/weather?city={city}'
+        response = requests.get(api_url, headers={'X-Api-Key': '1455199545msh53bfce68da0845bp10119cjsn23566562dee1'})
         if response.status_code == requests.codes.ok:
             print(response.text)
         else:
