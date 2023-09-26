@@ -137,5 +137,5 @@ def dashboard(request):
     user="Default"
     return render(request,"dashboard.html",{'user':user})
 
-def custom404(request):
+def custom404(request,exceptiont):
     return render(request,"404.html")
