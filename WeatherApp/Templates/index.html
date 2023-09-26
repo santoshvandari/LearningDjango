@@ -14,8 +14,8 @@
     <div class="container">
         <form class="search-city" method="POST">
             {% csrf_token %}
-            <input type="text" name="city" placeholder="Enter the City" id="inputvalue"/>
-            <button type="submit" id="submit">Search</button>
+            <input type="text" name="city" placeholder="Enter the City"/>
+            <button type="submit">Search</button>
         </form>
         <h1>Weather Information of <span id="city">City</span></h1>
         <div class="cards">
