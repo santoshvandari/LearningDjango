@@ -19,10 +19,16 @@
         </form>
 
         <h1>Weather Information of <span id="city">City</span></h1>
-        {% if code %}
+        {% if code or error %}
         <div id="errorMessage">
-            Sorry! City didn't Found
-            <p>Please Enter Another City</p>
+            {% if code %}
+                Sorry! City didn't Found
+                <p>Please Enter Another City</p>
+            {% endif %}
+            {% if error %}
+                Internet Connection Failed
+                <p>Please to the Internet</p>
+                {% endif %}
         </div>
         {% else %}
         <div class="cards">
