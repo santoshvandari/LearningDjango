@@ -138,14 +138,14 @@ def loginUser(request):
             if data:
                 request.session['user'] = data[0].username
                 print("user data exist")
-                return redirect(request,"dashboard.html",{'user':request.session['user']})
+                return redirect("dashboard.html",{'user':request.session['user']})
                 
             else: 
                 print("user Data Doesn't exit")
-                return redirect(request, "login.html",{'msg':"Sorry!! Please Recheck Your Credential"})
+                return redirect("login.html",{'msg':"Sorry!! Please Recheck Your Credential"})
         except:
             print("user Data Doesn't exit")
-            return redirect(request, "login.html",{'msg':"Sorry!! Some Issue Arise!!!"})
+            return redirect("login.html",{'msg':"Sorry!! Some Issue Arise!!!"})
 
     return render(request, "login.html",{'msg':""})
 
@@ -153,14 +153,21 @@ def loginUser(request):
 
 
 def logoutUser(request):
+    # if request.session["user"]:
+        
     # del request.session['user']
     return redirect("index.html")
 
 
 
 def dashboard(request):
-    user="Default"
-    return render(request,"dashboard.html",{'user':user})
+    if request.session["user"]:
+        user=request.session["user"]
+        return render(request,"dashboard.html",{'user':user})
+    else:
+        return redirect(request, "login.html",{'msg':"Sorry!! Some Issue Arise!!!"})
+
+
 
 def custom404(request,exception):
     return render(request,"404.html",status=404)
