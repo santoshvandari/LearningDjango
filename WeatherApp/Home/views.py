@@ -10,7 +10,9 @@ def Index(request):
         api_url = f'https://api.api-ninjas.com/v1/weather?city={city}'
         response = requests.get(api_url, headers={'X-Api-Key': 'U3b+x3/lun8o6+Mm0qYWQw==H7yIc2DshurjNdq7'})
         if response.status_code == requests.codes.ok:
+            response=response.json()
             print(response)
+            # print(response['temp'])
             # data=[
 
             # ]
