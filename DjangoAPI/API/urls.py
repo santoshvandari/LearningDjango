@@ -21,7 +21,7 @@ from API import views
 
 
 router=routers.DefaultRouter()
-router.register(r'api',views.PersonalInformationViewset)
+# router.register(r'api',views.PersonalInformationViewset)
 # router.register(r'other',views.PersonalInformationViewset)
 
 urlpatterns = [
