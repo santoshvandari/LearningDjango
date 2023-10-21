@@ -1,4 +1,4 @@
-from  API.models import PersonalInformation 
+from  API.models import PersonalInformation,StudentInformation
 from rest_framework import serializers
 
 
@@ -8,3 +8,8 @@ from rest_framework import serializers
 #         model = PersonalInformation
 #         fields = ['personalId', 'name', 'address', 'description', 'date']
 
+
+class StudentSerilizers(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model=StudentInformation
+        fields="__all__"
