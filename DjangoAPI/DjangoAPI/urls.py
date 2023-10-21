@@ -21,4 +21,9 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     # path("santosh/",include("Test.urls")),
     # path('',include('Test.urls')),
+
+
+
+    
+    path('',include('API.urls')),
 ]

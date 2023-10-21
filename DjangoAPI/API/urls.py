@@ -16,8 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Test import views
+from API import views
 
 urlpatterns = [
-        
+    path('',views.home),
 ]
