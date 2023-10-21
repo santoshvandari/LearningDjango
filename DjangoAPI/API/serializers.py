@@ -1,4 +1,5 @@
-from  API.models import PersonalInformation,StudentInformation
+# from  API.models import PersonalInformation
+from API.models import StudentInformation
 from rest_framework import serializers
 
 

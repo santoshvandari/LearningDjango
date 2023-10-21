@@ -1,7 +1,9 @@
 from django.shortcuts import render,HttpResponse
-from API.models import PersonalInformation,StudentInformation
+# from API.models import PersonalInformation
+from API.models import StudentInformation
 from rest_framework import viewsets
-from API.serializers import PersonalInformationSerializer,StudentSerilizers
+# from API.serializers import PersonalInformationSerializer
+from API.serializers import StudentSerilizers
 
 # Create your views here.
 # def home(request):
