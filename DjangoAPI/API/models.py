@@ -16,6 +16,7 @@ class StudentInformation(models.Model):
     studentId=models.AutoField(primary_key=True)
     name=models.CharField(max_length=50)
     grade=models.IntegerField()
+    date=models.DateField(auto_now=True)
     class Meta:
         db_table='StudentData'
 
