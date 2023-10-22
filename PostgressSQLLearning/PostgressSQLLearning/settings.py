@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -80,16 +81,26 @@ WSGI_APPLICATION = 'PostgressSQLLearning.wsgi.application'
 #     }
 # }
 
+
+# using the databse configuration from the supabase
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "postgres",
+#         "USER": "postgres",
+#         "PASSWORD": "E2PNHoF6zi722B7n",
+#         "HOST": "db.wcvelnmhgborfrktbfoy.supabase.co",
+#         "PORT": "5432",
+#     }
+# }
+
+
+#using the database connection string from the supabase
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "E2PNHoF6zi722B7n",
-        "HOST": "db.wcvelnmhgborfrktbfoy.supabase.co",
-        "PORT": "5432",
-    }
+    'default': dj_database_url.config(default='postgres://postgres:E2PNHoF6zi722B7n@db.wcvelnmhgborfrktbfoy.supabase.co:5432/postgres')
 }
+
+
 
 
 
