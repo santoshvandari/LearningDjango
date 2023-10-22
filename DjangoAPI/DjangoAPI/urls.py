@@ -22,7 +22,7 @@ urlpatterns = [
     # path("santosh/",include("Test.urls")),
     # path('',include('Test.urls')),
 
-
+ 
 
 
     path('',include('API.urls')),
