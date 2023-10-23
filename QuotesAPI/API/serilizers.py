@@ -7,3 +7,10 @@ class QuotesCollectionSerializer(serializers.ModelSerializer):
         id=serializers.ReadOnlyField()
         model = QuotesCollection
         fields = "__all__"
+    def validate(self, data):
+        # Add your custom validation logic here to prevent duplicates
+        # For example, check if the data already exists in the database
+        if QuotesCollection.objects.filter(quotes=data['quotes']).exists():
+            raise serializers.ValidationError("This data already exists.")
+        else: 
+            return data
