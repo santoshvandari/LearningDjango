@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'QuotesAPI.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.config(default='postgresql://postgres:tECbamhozKqu1YmG@db.knvjyycyltpldfqjibma.supabase.co:5432/postgres')
+    'default': dj_database_url.config(default='postgresql://postgres:QI4ZlLL4R7YO91rv@db.dsdfemkhffmlomnpghem.supabase.co:5432/postgres')
 }
 
 
