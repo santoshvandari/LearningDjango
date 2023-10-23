@@ -8,10 +8,10 @@ import random
 # Create your views here.
 class QuotesCollectionViewSet(viewsets.ModelViewSet):
     serializer_class = QuotesCollectionSerializer
-    def get_object(self):
+    def get_queryset(self):
         data_length = QuotesCollection.objects.count()
         random_id = random.randint(1, data_length)
-        random_record = QuotesCollection.objects.get(id=random_id)
+        random_record = QuotesCollection.objects.filter(id=random_id)
         return random_record
 
 def Home(request):
