@@ -21,7 +21,7 @@ from API import views
 
 
 router = routers.DefaultRouter()
-router.register(r'quotes', views.QuotesCollectionViewSet)
+router.register(r'quotes', views.QuotesCollectionViewSet,basename="QuotesAPI")
 
 urlpatterns = [
     path('home/',views.Home,name="home"),

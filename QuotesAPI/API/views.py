@@ -7,15 +7,12 @@ import random
 
 # Create your views here.
 class QuotesCollectionViewSet(viewsets.ModelViewSet):
-    # queryset = QuotesCollection.objects.all()
-    # datalength = QuotesCollection.objects.all().count()
-    # generate the random number
-    # random_index = random.randint(0, datalength - 1)
-    # random_index=0
-    queryset=QuotesCollection.objects.all()
-    # print(queryset.size)
-    
     serializer_class = QuotesCollectionSerializer
+    def get_object(self):
+        data_length = QuotesCollection.objects.count()
+        random_id = random.randint(1, data_length)
+        random_record = QuotesCollection.objects.get(id=random_id)
+        return random_record
 
 def Home(request):
     return HttpResponse("Hello World")
