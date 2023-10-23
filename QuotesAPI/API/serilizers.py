@@ -1,4 +1,4 @@
-from django.contrib.auth.models import QuotesCollection
+from API.models import QuotesCollection
 from rest_framework import serializers
 
 
