@@ -4,9 +4,9 @@ from rest_framework import serializers
 
 class QuotesCollectionSerializer(serializers.ModelSerializer):
     class Meta:
-        id=serializers.ReadOnlyField()
+        # id=serializers.ReadOnlyField()
         model = QuotesCollection
-        fields = "__all__"
+        fields = ['quotes', 'author']
     def validate(self, data):
         # Add your custom validation logic here to prevent duplicates
         # For example, check if the data already exists in the database
