@@ -100,6 +100,11 @@ main {
                 @include code(900px);
             }
         }
+        #ajax-sample {
+            pre {
+                @include code(900px);
+            }
+        }
     }
     #example {
         @include marginpadding;
@@ -136,6 +141,9 @@ main {
                h5 {
                     font-size: 25px;
                     font-weight: 500;
+                }
+                #author{
+                    text-align: right;
                 }
             }
         }

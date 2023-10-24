@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quotes API</title>
+    <title>Random Jokes API</title>
     <link rel="stylesheet" href="static/css/style.css" />
     <script defer src="static/js/script.js"></script>
 </head>
 <body>
-    <div class="container p-10">
-    <header class="h-14 bg-slate-800 text-white w-full">
+    <div class="container">
+    <header>
         <nav>
-            <ul class="flex items-center justify-center gap-4 text-xl font-semibold">
+            <ul>
                 <li><a href="#intro">Introduction</a></li>
                 <li><a href="#use">Usage</a></li>
                 <li><a href="#example">Example</a></li>
@@ -42,7 +42,7 @@
        fetch("http://randomjokesapi.santosh0.com.np/JokesAPI/")
        .then(response=>response.json())
        .then(response=>{
-           console.log(response);
+           console.log(response[0]);
        }).catch(e=>{
            console.log(e);
        })
@@ -73,6 +73,7 @@
                 <div id="result">
                     <h5>Result:</h5>
                     <p id="fetch-result">Loading</p>
+                    <p id="author"></p>
                 </div>
             </div>
         </section>
