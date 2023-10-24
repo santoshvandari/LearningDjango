@@ -15,5 +15,5 @@ class QuotesCollectionViewSet(viewsets.ModelViewSet):
         return random_record
 
 def Home(request):
-    return HttpResponse("Hello World")
-    return render(request,"home.html")
+    # return HttpResponse("Hello World")
+    return render(request,"index.html")
