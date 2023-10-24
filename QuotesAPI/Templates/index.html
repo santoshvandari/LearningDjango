@@ -1,16 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <script defer src='static/js/script.js'></script> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Jokes API</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="assets/script.js"></script>
 </head>
 <body>
-    <h1 class="text-3xl font-bold underline bg-sky-700">
-        Hello world!
-      </h1>
-    
+    <div class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#use">Usage</a></li>
+                <li><a href="#example">Example</a></li>
+                <li><a href="#contribute">Contribution</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h3 id="intro-heading">Introduction</h3>
+            <p>
+                Welcome to the API documentation for the Random Joke Generator. This API provides you with a collection
+                of computer, programming, and development-related jokes in JSON format. It is designed to add a touch of
+                humor to your applications, websites, or projects. This documentation will guide you through the usage,
+                examples, and contribution guidelines of the API.
+            </p>
+        </section>
+        <section id="use">
+            <h3 id="use-heading">Usage</h3>
+            <p>To retrieve a random joke, make a GET request to the API endpoint with the help of fetch or Ajax of
+                JavaScript. The response from the server will contain a JSON object with the joke data, including the
+                setup and punchline.</p>
+            <div id="fetch-sample">
+                <p>You can retrieve the Jokes in JavaScript by Using the Fetch. Code Sample is Given Below: </p>
+                <pre>
+                    <code>
+       fetch("http://randomjokesapi.santosh0.com.np/JokesAPI/")
+       .then(response=>response.json())
+       .then(response=>{
+           console.log(response);
+       }).catch(e=>{
+           console.log(e);
+       })
+                        </code>
+                    </pre>
+            </div>
+            <div id="ajax-sample">
+                <p>You can retrieve the Jokes in JavaScript by Using the Ajax. Code Sample is Given Below: </p>
+                <pre>
+                    <code>
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', 'http://randomjokesapi.santosh0.com.np/JokesAPI/');
+        xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            let data = JSON.parse(xhr.responseText);
+            console.log(data);
+            }
+        };
+        xhr.send();
+                </code>
+                </pre>
+            </div>
+        </section>
+        <section id="example">
+            <h1 id="example-heading">Example</h1>
+            <div class="container">
+                <button id="btn-fetch">Fetch</button>
+                <div id="result">
+                    <h5>Result:</h5>
+                    <p id="fetch-result">Loading</p>
+                </div>
+            </div>
+        </section>
+        <section id="contribute">
+            <h2 id="contribute-heading">Contribution</h2>
+            <p>Contributions to the Random Joke Generator API are welcome. If you have any jokes related to computer
+                science, programming, or development, feel free to contribute them to the API. Get the GitHub Repository
+                from below to contribute in the API. Your contributions will help make the API even more entertaining
+                and enjoyable for the developer community. </p>
+            <p>GitHub Repository <a
+                    href="https://github.com/santoshvandari/Random-Jokes-API">https://github.com/santoshvandari/Random-Jokes-API</a>
+            </p>
+            <p>
+                Thank you for choosing the Random Joke Generator API. We hope it brings a smile to your face and adds a
+                dash of fun to your coding adventures!
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; Copright By
+            <a href="https://bhandari-santosh.com.np">Santosh Bhandari</a>
+        </p>
+    </footer>
+    </div>
 </body>
 </html>
