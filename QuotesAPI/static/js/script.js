@@ -15,13 +15,14 @@ document.getElementById("btn-fetch").addEventListener("click",FetchData);
 // }
 FetchData();
 
-function FetchData()
-let xhr = new XMLHttpRequest();
-        xhr.open('GET', 'http://randomjokesapi.santosh0.com.np/JokesAPI/');
-        xhr.onreadystatechange = function() {
+function FetchData(){
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'api/quotes/');
+    xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let data = JSON.parse(xhr.responseText);
-            console.log(data);
-            }
-        };
-        xhr.send();
+            console.log(data[0]);
+        }
+    };
+    xhr.send();
+}

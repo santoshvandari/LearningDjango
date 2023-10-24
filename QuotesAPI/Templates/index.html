@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Jokes API</title>
+    <title>Quotes API</title>
     <link rel="stylesheet" href="static/css/style.css" />
     <script defer src="static/js/script.js"></script>
 </head>
@@ -24,19 +24,15 @@
         <section id="intro">
             <h3 id="intro-heading">Introduction</h3>
             <p>
-                Welcome to the API documentation for the Random Joke Generator. This API provides you with a collection
-                of computer, programming, and development-related jokes in JSON format. It is designed to add a touch of
-                humor to your applications, websites, or projects. This documentation will guide you through the usage,
-                examples, and contribution guidelines of the API.
+                The Quotes API is a powerful and versatile tool designed to provide developers with access to an extensive collection of inspirational, motivational, and thought-provoking quotes. This API allows users to seamlessly integrate inspiring quotes into their applications, websites, or projects, enriching content and user experiences. Whether you're building a motivational app, enhancing your blog, or looking to add a touch of wisdom to your project, the Quotes API simplifies the process of accessing and displaying quotes with minimal effort.
             </p>
         </section>
         <section id="use">
             <h3 id="use-heading">Usage</h3>
-            <p>To retrieve a random joke, make a GET request to the API endpoint with the help of fetch or Ajax of
-                JavaScript. The response from the server will contain a JSON object with the joke data, including the
-                setup and punchline.</p>
+            <p>To retrieve a Quotes from the API, make a GET request to the API endpoint with the help of fetch or Ajax of
+                JavaScript. The response from the server will contain a JSON object with the Quotes and Author Name.</p>
             <div id="fetch-sample">
-                <p>You can retrieve the Jokes in JavaScript by Using the Fetch. Code Sample is Given Below: </p>
+                <p>You can retrieve the Quotes in JavaScript by Using the Fetch. Code Sample is Given Below: </p>
                 <pre>
                     <code>
        fetch("http://randomjokesapi.santosh0.com.np/JokesAPI/")
@@ -50,7 +46,7 @@
                     </pre>
             </div>
             <div id="ajax-sample">
-                <p>You can retrieve the Jokes in JavaScript by Using the Ajax. Code Sample is Given Below: </p>
+                <p>You can retrieve the Quotes in JavaScript by Using the Ajax. Code Sample is Given Below: </p>
                 <pre>
                     <code>
         let xhr = new XMLHttpRequest();
@@ -58,7 +54,7 @@
         xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let data = JSON.parse(xhr.responseText);
-            console.log(data);
+            console.log(data[0]);
             }
         };
         xhr.send();
@@ -79,8 +75,7 @@
         </section>
         <section id="contribute">
             <h2 id="contribute-heading">Contribution</h2>
-            <p>Contributions to the Random Joke Generator API are welcome. If you have any jokes related to computer
-                science, programming, or development, feel free to contribute them to the API. Get the GitHub Repository
+            <p>Contributions to the Quotes API are welcome. If you have any Quotes or any Idea for making the API more powerful and add some features, feel free to contribute them to the API. Get the GitHub Repository
                 from below to contribute in the API. Your contributions will help make the API even more entertaining
                 and enjoyable for the developer community. </p>
             <p>GitHub Repository <a
