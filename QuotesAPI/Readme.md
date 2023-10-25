@@ -83,7 +83,8 @@ public class QuotesApiClient {
 
 ```json
 { 
-    "quotes": "If you want to live a happy life, tie it to a goal, not to people or things.", "author": "Albert Einstein" 
+    "quotes": "If you want to live a happy life, tie it to a goal, not to people or things.", 
+    "author": "Albert Einstein" 
 }
 ```
 
@@ -91,16 +92,14 @@ public class QuotesApiClient {
 
 <p>The Random Jokes API provides a simple and fun way to generate random jokes. Feel free to use it in your projects or contribute to its development. We appreciate your support and welcome any feedback or suggestions. Enjoy the laughter!</p>
 
-
 ## Contributing
-<p>We welcome contributions to the Random Jokes API repository! If you'd like to contribute and add your own jokes or improve the existing code, follow these steps:</p>
 
-- Fork the repository.
-- Clone the forked repository to your local machine;
-- Create a new branch for your feature, bug fix or adding Jokes.
-- Make your changes and commit them with descriptive messages.
-- Push your branch to your forked repository.
-- Open a pull request to merge your changes back into the main repository.
+We welcome contributions! If you'd like to contribute to this project, please check out our [Contribution Guidelines](Contribution.md).
+
+## Code of Conduct
+
+Please review our [Code of Conduct](CodeOfConduct.md) before participating in this project.
 
 ## License
-<p>This project is licensed under the MIT License. You can find more details in the LICENSE file.</p>
+
+This project is licensed under the [License](LICENSE).
