@@ -89,8 +89,7 @@ public class QuotesApiClient {
 ```
 
 ## Conclusion
-
-<p>The Random Jokes API provides a simple and fun way to generate random jokes. Feel free to use it in your projects or contribute to its development. We appreciate your support and welcome any feedback or suggestions. Enjoy the laughter!</p>
+The Random Jokes API provides a simple and fun way to generate random jokes. Feel free to use it in your projects or contribute to its development. We appreciate your support and welcome any feedback or suggestions. Enjoy the laughter!</p>
 
 ## Contributing
 
