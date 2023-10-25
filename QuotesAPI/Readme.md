@@ -64,7 +64,7 @@ public class QuotesApiClient {
                 if (responseBody != null) {
                     String jsonData = responseBody.string();
                     JSONObject json = new JSONObject(jsonData);
-                    String quote = json.getString("auotes");
+                    String quote = json.getString("auotesd");
                     String author = json.getString("author");
                     System.out.println("Random Quote: " + quote + " - " + author);
                 }
