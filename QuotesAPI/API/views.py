@@ -8,6 +8,7 @@ import random
 # Create your views here.
 class QuotesCollectionViewSet(viewsets.ModelViewSet):
     serializer_class = QuotesCollectionSerializer
+    # queryset=QuotesCollection.objects.all()
     def get_queryset(self):
         data_length = QuotesCollection.objects.count()
         random_id = random.randint(1, data_length)
