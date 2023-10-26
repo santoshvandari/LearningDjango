@@ -24,7 +24,7 @@ urlpatterns = [
     path("",include("API.urls"))
 ]
 
-
-admin.site.site_header = "UMSRA Admin"
-admin.site.site_title = "UMSRA Admin Portal"
-admin.site.index_title = "Welcome to UMSRA Researcher Portal"
+# Change the Default ADIMN Text
+admin.site.site_header = "Quotes API"
+admin.site.site_title = "Quotes API Portal"
+admin.site.index_title = "Welcome to Quotes API"
