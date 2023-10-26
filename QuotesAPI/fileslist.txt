@@ -1,4 +1,0 @@
-django
-rest_framework
-dotenv
-corsheaders
