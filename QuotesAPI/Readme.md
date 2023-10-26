@@ -101,4 +101,4 @@ Please review our [Code of Conduct](CodeOfConduct.md) before participating in th
 
 ## License
 
-This project is licensed under the [License](LICENSE).
+This project is licensed under the MIT [License](LICENSE).
