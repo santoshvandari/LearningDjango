@@ -17,7 +17,7 @@
  Here's an example of how to use the Quotes API to fetch a random quote in JS:
 
 ```JavaScript
-fetch("GET","JokesAPI/JokesAPI.php")
+fetch("GET","https://quotesapi.santosh0.com.np/api/quotes/")
 .then(response=>response.json())
 .then(response=>{
     console.log(response);
@@ -31,7 +31,7 @@ fetch("GET","JokesAPI/JokesAPI.php")
 ```python
 import requests
 
-url = "url"
+url = "https://quotesapi.santosh0.com.np/api/quotes/"
 response = requests.get(url)
 data = response.json()
 
@@ -50,7 +50,7 @@ import org.json.JSONObject;
 public class QuotesApiClient {
     public static void main(String[] args) {
         OkHttpClient client = new OkHttpClient();
-        String apiUrl = "api"; // Replace with the actual API endpoint
+        String apiUrl = "https://quotesapi.santosh0.com.np/api/quotes/"; 
 
         Request request = new Request.Builder()
             .url(apiUrl)
