@@ -16,3 +16,10 @@ body{
 label{
     color: #fff;
 }
+.registertext,h1{
+    color: #fff;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
