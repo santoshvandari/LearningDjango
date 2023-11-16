@@ -8,7 +8,10 @@ class WelcomeMessage:
         self.username=fullname
         self.receiveremail=receiveremail
     subject = "Welcome to Website - Django Login!!!"
-    message="Hello {full},\n\nWelcome to Django Login.\n\n Please Activate account by Confirming it.\n\nThanks,\nDjango Login Team"
+    message="Hello {fullname},\n\nWelcome to Django Login.\n\n Please Activate account by Confirming it.\n\nThanks,\nDjango Login Team"
 
     def SendEmail(self):
-        send_mail(self.subject,self.message,senderemail,self.receiveremail,fail_silently=False)
+        send_mail(self.subject,self.message,senderemail,[self.receiveremail],fail_silently=False)
+
+class ConfirmationMail:
+    pass
