@@ -1,17 +1,18 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import logout,login,authenticate
+from .mail import *
 
 
 # Create your views here.
 def index(request):
     if(request.user.is_authenticated):
-        return render(request,"dashboard.html",{'user':request.user.first_name})
+       return redirect("/dashboard")
     return render(request,"index.html")
 
 def signin(request):
     if(request.user.is_authenticated):
-        return render(request,"dashboard.html",{'user':request.user.first_name})
+       return redirect("/dashboard")
      
     if request.method=='POST':
         username = request.POST.get("username")
@@ -27,7 +28,7 @@ def signin(request):
 
 def signup(request):
     if(request.user.is_authenticated):
-        return render(request,"dashboard.html",{'user':request.user.first_name})
+       return redirect("/dashboard")
      
     if request.method == "POST":
         username = request.POST.get("username")
@@ -41,6 +42,11 @@ def signup(request):
         user = User.objects.create_user(username,email,password)
         user.first_name = name
         user.save()
+        welmessage=WelcomeMessage(name,email)
+        welmessage.SendEmail()
+
+
+
         print("user Created")
         login(request,user)
         return redirect("/dashboard")
