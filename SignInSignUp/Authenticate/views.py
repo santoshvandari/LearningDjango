@@ -14,6 +14,7 @@ def signin(request):
         password = request.POST.get("password")
         user = authenticate(request,username=username,password=password)
         if user is not None:
+            print("user is authenticated")
             login(request,user)
             return redirect("/dashboard")
         else:
@@ -29,6 +30,7 @@ def signup(request):
         user = User.objects.create_user(username,email,password)
         user.first_name = name
         user.save()
+        print("user Created")
         login(request,user)
         return redirect("/dashboard")
     return render(request,"signup.html")
