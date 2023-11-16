@@ -13,3 +13,6 @@ body{
 .wrapper{
     display: flex;
 }
+label{
+    color: #fff;
+}
