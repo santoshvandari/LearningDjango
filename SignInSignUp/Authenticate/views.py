@@ -20,10 +20,11 @@ def signup(request):
     return render(request,"signup.html")
 
 def logout(request):
-    pass
+    if (request.user is not None):
+        logout(request)
 
 def dashboard(request):
-    if(User.is_authenticated):
+    if(request.user.is_authenticated):
         return render(request,"dashboard.html",{'user':User.first_name})
     else:
         return redirect("/signin")
