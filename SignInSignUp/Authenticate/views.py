@@ -11,10 +11,11 @@ def signin(request):
 
 def signup(request):
     if request.method == "POST":
+        username = request.POST.get("username")
         name = request.POST.get("name")
         email = request.POST.get("email")
         password = request.POST.get("password")
-        print(name,email,password)
+        print(username, name,email,password)
     return render(request,"signup.html")
 
 def logout(request):
