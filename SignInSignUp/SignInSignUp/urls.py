@@ -22,4 +22,5 @@ urlpatterns = [
     path("",include("Authenticate.urls")),
     path('signin',include("Authenticate.urls")),
     path('signup',include("Authenticate.urls")),
+    path("logout",include("Authenticate.urls")),
 ]
