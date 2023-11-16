@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib.auth.models import User
 
 # Create your views here.
 def index(request):
@@ -15,8 +16,15 @@ def signup(request):
         name = request.POST.get("name")
         email = request.POST.get("email")
         password = request.POST.get("password")
-        print(username, name,email,password)
+        # print(username, name,email,password)
     return render(request,"signup.html")
 
 def logout(request):
     pass
+
+def dashboard(request):
+    if(User.is_authenticated):
+        return render(request,"dashboard.html",{'user':User.first_name})
+    else:
+        return redirect("/signin")
+    
