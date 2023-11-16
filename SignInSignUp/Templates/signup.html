@@ -11,6 +11,13 @@
 <body>
     <div>
         <h1>Sign Up Details</h1>
+        <p><strong>
+            {% if username%}
+            {{username}}
+            {% elif email%}
+            {{email}}
+            {% endif %}
+        </strong></p>
         <form method="post">
             {% csrf_token %}
             <label for="username">Username:</label>
