@@ -35,9 +35,9 @@ def signup(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
         if(User.objects.filter(username=username)):
-            return render(request, "signup.html",{'username':"Username already Taken"})
+            return render(request, "signup.html",{'username':"Username already Taken!!"})
         if(User.objects.filter(email=email)):
-            return render(request, "signup.html",{'email':"email already Taken"})
+            return render(request, "signup.html",{'email':"Email already Taken!!"})
         user = User.objects.create_user(username,email,password)
         user.first_name = name
         user.save()
