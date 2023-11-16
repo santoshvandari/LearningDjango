@@ -26,7 +26,6 @@ def signup(request):
         name = request.POST.get("name")
         email = request.POST.get("email")
         password = request.POST.get("password")
-        # print(username, name,email,password)
     return render(request,"signup.html")
 
 def logout(request):
