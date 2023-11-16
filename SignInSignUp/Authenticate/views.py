@@ -5,7 +5,6 @@ from django.contrib.auth import logout,login,authenticate
 
 # Create your views here.
 def index(request):
-
     return render(request,"index.html")
 
 def signin(request):
@@ -35,14 +34,17 @@ def signup(request):
         return redirect("/dashboard")
     return render(request,"signup.html")
 
-def logout(request):
+def logoutUser(request):
     if (request.user is not None):
         logout(request)
+        print("user Logout")
         return redirect("/")
+    else:
+        return redirect("/dashboard")
 
 def dashboard(request):
     if(request.user.is_authenticated):
-        return render(request,"dashboard.html",{'user':User.first_name})
+        return render(request,"dashboard.html",{'user':request.user.first_name})
     else:
         return redirect("/signin")
     

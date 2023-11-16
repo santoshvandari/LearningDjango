@@ -11,7 +11,7 @@
 <body>
     <div>
         <h1>Sign Up Details</h1>
-        <form method="post" action="/signup">
+        <form method="post">
             {% csrf_token %}
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" placeholder="Enter a Username" required>
