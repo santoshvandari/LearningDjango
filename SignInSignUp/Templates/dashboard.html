@@ -7,9 +7,26 @@
     <link href="/static/css/dashboard.css" rel="stylesheet"/>
 </head>
 <body class="bg-dark">
-    <h1>Dashboard</h1>
-    <p>Hi, <strong> {{ user }}</strong></p><br/>
-    <p>Welcome to the Dashboard</p><br/>
-    <a href="/logout">Logout</a>
+   <div class="dashboard-container">
+        <header>
+            <h1>Dashboard</h1>
+            <!-- Display the logged-in user's name -->
+            <p>Welcome, {{ user }}</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Analytics</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="content">
+                <h2>Welcome to the Dashboard</h2>
+                <p>This is a simple dashboard design.</p>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

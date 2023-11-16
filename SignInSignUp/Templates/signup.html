@@ -16,13 +16,15 @@
 <body class="bg-dark">
     <div>
         <h1>Sign Up Details</h1>
+        {% if username%}
         <div class="alert alert-danger" role="alert">
-            {% if username%}
             {{username}}
-            {% elif email%}
+        </div>
+        {% elif email%}
+        <div class="alert alert-danger" role="alert">
             {{email}}
-            {% endif %}
-          </div>
+        </div>
+        {% endif %}
         <form method="post">
             {% csrf_token %}
              <div class="mb-3">
