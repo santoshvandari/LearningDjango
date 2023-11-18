@@ -21,3 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",include("Student.urls"))
 ]
+
+
+admin.site.site_header = "Student Management System"
+admin.site.site_title = "Student Management System"
+admin.site.index_title = "Welcome to Student Management System"
