@@ -1,5 +1,4 @@
 from pydoc import render_doc
-from tkinter import E
 from django.shortcuts import render
 from products.models import Product
 
