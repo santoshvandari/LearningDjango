@@ -84,13 +84,16 @@ WSGI_APPLICATION = 'MongoDBTest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'your-db-name',
+        'NAME': 'DjangoWithMongoDB',
         'CLIENT': {
-            'host': 'your-mongo-uri',
+            'host': 'mongodb+srv://santoshvandari:jQnzosRQNUF0yU7s@djangowithmongodb.9up9bjy.mongodb.net/?retryWrites=true&w=majority',
         },
     }
 }
 
+
+
+# jQnzosRQNUF0yU7s
 
 
 
