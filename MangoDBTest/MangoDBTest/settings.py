@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'MangoDBTest.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'djongo',
-            'NAME': 'your-db-name',
+            'NAME': 'DjangoWithMangoDb',
             'ENFORCE_SCHEMA': False,
             'CLIENT': {
-                'host': 'mongodb+srv://<username>:<password>@<atlas cluster>/<myFirstDatabase>?retryWrites=true&w=majority'
+                'host': 'mongodb+srv://santoshvandari:XsjT8xe8Anyf7ceI@djangowithmangodb.fccuhwa.mongodb.net/?retryWrites=true&w=majority'
             }  
         }
 }
