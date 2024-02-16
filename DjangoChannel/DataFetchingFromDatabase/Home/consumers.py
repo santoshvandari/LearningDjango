@@ -39,7 +39,6 @@ def generate_student_info():
     faculties = ["Engineering", "Science", "Arts", "Commerce", "Medical"]
     student_faculty = random.choice(faculties)
     return {
-        "id":'null', # id is null because we are not using any database to store the student information
         "student_name": student_name,
         "student_address": student_address,
         "student_faculty": student_faculty
