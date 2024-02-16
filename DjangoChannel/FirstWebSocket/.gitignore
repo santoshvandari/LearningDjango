@@ -1,0 +1,4 @@
+venv
+FirstWebSocket/__pycache__
+Home/__pycache__
+Home/migrations/__pycache__
