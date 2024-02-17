@@ -29,7 +29,6 @@ def signin(request):
 def signup(request):
     if(request.user.is_authenticated):
        return redirect("/dashboard")
-     
     if request.method == "POST":
         username = request.POST.get("username")
         name = request.POST.get("name")
