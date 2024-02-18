@@ -43,10 +43,6 @@ def signup(request):
         user.save()
         welmessage=WelcomeMessage(name,email)
         welmessage.SendEmail()
-
-
-
-        print("user Created")
         login(request,user)
         return redirect("/dashboard")
     return render(request,"signup.html")
