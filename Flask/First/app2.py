@@ -11,4 +11,5 @@ def about():
     return "This is about page"
 
 if __name__=="__main__":
-    app.run(debug=True)
+    # Run the app in 8000 port
+    app.run(debug=True,port=8000)
