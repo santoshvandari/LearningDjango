@@ -13,10 +13,14 @@ div{
     align-items: center;
     height: 100vh;
     background: #183035;
+    padding: 50px;
 }
 div h1{
     font-size: 3rem;
     color: #fff;
     text-align: center;
     
+}
+div p{
+    text-align: center;
 }
