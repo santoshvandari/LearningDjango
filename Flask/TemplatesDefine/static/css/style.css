@@ -12,15 +12,20 @@ div{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
     background: #183035;
     padding: 50px;
+    color: #fcfcfc;
 }
 div h1{
     font-size: 3rem;
-    color: #fff;
     text-align: center;
     
 }
 div p{
     text-align: center;
+}
+a{
+    color: #fff;
+    text-decoration: none;
 }
