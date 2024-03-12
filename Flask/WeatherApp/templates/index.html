@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-   <script defer src="script.js"></script>
+    <link rel="stylesheet" href="/static/style.css"/>
     <title>Weather Information Application</title>
 </head>
 <body>
     <main>
     <div class="container">
         <div class="search-city">
-            <input type="text" placeholder="Enter the City" id="inputvalue"/>
+            <form action="/" method="POST">
+            <input type="text" placeholder="Enter the City" name='city'/>
             <button type="submit" id="submit">Search</button>
+            </form>
         </div>
-        <h1>Weather Information of <span id="city">City</span></h1>
+
+        {% if weatherinfo.status_code==200 %}
+        <h1>Weather Information of <span id="city">{{weatherinfo.city}}</span></h1>
         <div class="cards">
             <div class="card card1">
                 <h2>Temperature</h2>
-                <p><span id="Temperature"></span>&#8451</p>
+                <p><span>{{weatherinfo.data.temp}}</span>&#8451</p>
             </div>
             <div class="card card1">
                 <h2>Humidity</h2>
-                <p><span id="Humidity"></span>m/s</p>
+                <p><span>{{weatherinfo.data.humidity}}</span>m/s</p>
             </div>
             <div class="card card1">
                 <h2>Wind</h2>
-                <p><span id="wind"></span>km/hr</p>
+                <p><span>{{weatherinfo.data.wind_speed}}</span>km/hr</p>
             </div>
         </div>
         <div class="other">
@@ -43,21 +46,28 @@
                     <th>Sunset</th>
                 </tr>
                 <tr>
-                    <td id="InfoCity"></td>
-                    <td id="cloudPCT"></td>
-                    <td id="windDegree"></td>
-                    <td id="maxTemp"></td>
-                    <td id="minTemp"></td>
-                    <td id="sunrise"></td>
-                    <td id="sunset"></td>
+                    <td>{{weatherinfo.city}}</td>
+                    <td >{{weatherinfo.data.cloud_pct}}</td>
+                    <td >{{weatherinfo.data.wind_degrees}}</td>
+                    <td>{{weatherinfo.data.max_temp}}</td>
+                    <td >{{weatherinfo.data.min_temp}}</td>
+                    <td >{{weatherinfo.data.surise}}</td>
+                    <td>{{weatherinfo.data.sunset}}</td>
                     
                 </tr>
             </table>
         </div>
+        {% elif weatherinfo.status_code==400 %}
         <div id="errorMessage">
             Sorry! City didn't Found
             <p>Please Enter Another City</p>
         </div>
+        {% elif weatherinfo.status_code==101 %}
+        <div id="errorMessage">
+            Sorry! 
+            <p>{{weatherinfo.error}}</p>
+        </div>
+        {% endif %}
     </div>
     </main>
     <footer>
