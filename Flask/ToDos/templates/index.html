@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ToDo</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper">
+            <h1>Add Task</h1>
+            <form action="/" method="POST">
+                <label for="title">Title: </label>
+                <input type="text" id="title" name="title" placeholder="Enter Your Task Title" required/>
+                <label for="desc">Description:</label>
+                <input type="text" id="desc" name="desc" placeholder="Enter a Description about Task" required/>
+                <div class="btn-wrapper">
+                    <button type="submit">Add</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+        <div class="table-wrapper">
+            <h2>Tasks</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>S.N.</th>
+                        <th>Task Title</th>
+                        <th>Task Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for todo in todos %}
+                    <tr>
+                        <td>{{loop.index}}</td>
+                        <td>{{todo.title}}</td>
+                        <td>{{todo.desc}}</td>
+                        <td>
+                            <a href="/update/{{todo.id}}">Edit</a> | 
+                            <a href="/delete/{{todo.id}}">Delete</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</body>
+</html>

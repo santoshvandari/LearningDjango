@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - ToDo</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper">
+            <h1>Add Task</h1>
+            <form action="/update/{{todo.id}}" method="POST">
+                <label for="title">Title: </label>
+                <input type="text" id="title" name="title" value="{{todo.title}}">
+                <label for="desc">Description:</label>
+                <input type="text" id="desc" name="desc" value="{{todo.desc}}">
+                <div class="btn-wrapper">
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
