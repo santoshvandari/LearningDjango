@@ -17,4 +17,8 @@ def updatequotes(quotes:str,author:str,id):
     pass
 
 def deletequotes(id):
+    try:
+        pass
+    except Exception as e:
+        pass
     pass

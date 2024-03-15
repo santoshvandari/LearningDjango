@@ -19,7 +19,10 @@ async def addquote(quotes: str, author: str):
 
 @app.delete("/delete/")
 async def deletequote(id):
-    pass
+    id=id.strip()
+    if id:
+        return {"error":"ID Cannot be Empty"}
+    return deletequotes(id)
 
 
 @app.put("/update/")
