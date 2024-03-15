@@ -9,5 +9,12 @@ def getquotes():
 def addquotes(quotes: str, author: str):
     try:
         db.quotes.insert_one({'quotes': quotes,'author': author})
+        return {"success":"Quotes Added Successfully"}
     except Exception as e:
         return {"error": str(e)}
+    
+def updatequotes(quotes:str,author:str,id):
+    pass
+
+def deletequotes(id):
+    pass
