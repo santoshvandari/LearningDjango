@@ -27,7 +27,12 @@ async def deletequote(id):
 
 @app.put("/update/")
 async def updatequote(quote:str,author:str,id):
-    pass
+    id=id.strip()
+    quotes= quotes.strip()
+    author= author.strip()
+    if len(quotes) == 0 or len(author) == 0 or len(id)==0:
+        return {"error": "ID, Quotes and Author are required"}
+    return updatequotes(quote,author,id)
 
 
 # @app.get("/items/{item_id}")

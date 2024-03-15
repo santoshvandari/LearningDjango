@@ -14,6 +14,10 @@ def addquotes(quotes: str, author: str):
         return {"error": str(e)}
     
 def updatequotes(quotes:str,author:str,id):
+    try:
+        pass
+    except Exception as ex:
+        pass
     pass
 
 def deletequotes(id):
