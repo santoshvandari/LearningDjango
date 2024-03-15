@@ -20,19 +20,25 @@ async def addquote(quotes: str, author: str):
 @app.delete("/delete/")
 async def deletequote(id):
     id=id.strip()
-    if id:
+    if id is None:
         return {"error":"ID Cannot be Empty"}
     return deletequotes(id)
 
 
 @app.put("/update/")
-async def updatequote(quote:str,author:str,id):
+async def updatequote(id:str,quotes:str,author:str):
     id=id.strip()
     quotes= quotes.strip()
     author= author.strip()
-    if len(quotes) == 0 or len(author) == 0 or len(id)==0:
-        return {"error": "ID, Quotes and Author are required"}
-    return updatequotes(quote,author,id)
+    if len(quotes) == 0 and len(author) == 0:
+        return {"error":"Quotes Or Author are required"}
+    if id is None:
+        return {"error":"Please Pass the ID Too"}
+    if len(quotes) == 0:
+        return updatequotes("None",author,id)
+    elif len(author) == 0:
+        return updatequotes(quotes,"None",id)
+    return updatequotes(quotes,author,id)
 
 
 # @app.get("/items/{item_id}")
