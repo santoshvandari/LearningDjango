@@ -1,0 +1,21 @@
+# to create the docker image and run the container and the django project too 
+FROM python:3
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# set work directory
+WORKDIR /djangoapp
+
+COPY . .
+
+# install dependencies
+RUN pip install --upgrade pip
+
+COPY ./requirements.txt /djangoapp/requirements.txt
+RUN pip install -r requirements.txt
+
+# run django 
+CMD ["python", "manage.py", "runserver"]
+
