@@ -1,0 +1,6 @@
+services:
+  pythonapp:
+    build: .
+    ports:
+      - "80:8000"
+    container_name: "pythonapp"
